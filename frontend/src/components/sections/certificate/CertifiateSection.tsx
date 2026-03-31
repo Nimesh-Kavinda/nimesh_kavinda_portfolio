@@ -28,6 +28,60 @@ export default function CertificateSection() {
       location: "Kegalle, Sri Lanka",
       description:
         "Specialized in Software Engineering, focusing on advanced data structures, algorithms, and full-stack development technologies.",
+        semesters: [
+          {
+                    "sem": 1,
+                    "gpa": "4.0",
+                    "subjects": [
+                              "Visual Application Programming",
+                              "Web Design",
+                              "Computer and Network Systems",
+                              "Information Management and Information Systems",
+                              "ICT Project (Individual)",
+                              "Communication Skills"
+                            ]
+                  },
+          {
+                    "sem": 2,
+                    "gpa": "4.0",
+                    "subjects": [
+                              "Fundamentals of Programming",
+                              "Software Development ",
+                              "System Analysis and Design",
+                              "Data communication and Computer Networks",
+                              "Principles of User Interface Design",
+                              "ICT Project (Group)",
+                              "Technical Writing",
+                              "Human Value & Professional Ethics"
+                            ]
+                  },
+          {
+                    "sem": 3,
+                    "gpa": "4.0",
+                    "subjects": [
+                              "Object Oriented Programming",
+                              "Web Programming",
+                              "Data Structures and Algorithms",
+                              "Database Management Systems",
+                              "Operating Systems",
+                              "Information and Computer Security",
+                              "Statistics for IT"
+                            ]
+                  },
+          {
+                    "sem": 4,
+                    "gpa": "4.0",
+                    "subjects": [
+                              "Software Engineering",
+                              "Software Quality Assurance",
+                              "IT Project Management",
+                              "Professional World",
+                              "Programming Individual Project",
+                              "Business Analysis Practice",
+                              "Enterprise Architecture"
+                            ]
+                  }
+        ],
       icon: <GraduationCap className="w-5 h-5" />,
     },
     // {
@@ -89,6 +143,30 @@ export default function CertificateSection() {
                   <p className="text-gray-400 text-lg leading-relaxed max-w-2xl font-sans opacity-60 group-hover:opacity-100 transition-all duration-500">
                     {edu.description}
                   </p>
+
+                  {(edu as any).semesters && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                      {(edu as any).semesters.map((sem: any, sIdx: number) => (
+                        <div key={sIdx} className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 hover:bg-white/[0.05] transition-colors relative overflow-hidden group/sem">
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/[0.02] rounded-full blur-3xl -mr-10 -mt-10 group-hover/sem:bg-white/[0.05] transition-colors"></div>
+                          <div className="flex justify-between items-center mb-4 relative z-10">
+                            <h4 className="text-white font-bold text-xl">Semester {sem.sem}</h4>
+                            <div className="bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                              <span className="text-white/80 font-mono text-sm font-semibold tracking-wider">GPA: {sem.gpa}</span>
+                            </div>
+                          </div>
+                          <ul className="space-y-2 relative z-10">
+                            {sem.subjects.map((sub: string, i: number) => (
+                              <li key={i} className="text-white/60 text-sm flex items-start gap-2">
+                                <span className="text-white/30 text-[10px] mt-1">▶</span>
+                                <span className="leading-snug">{sub}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* Minimal Icon */}
