@@ -28,10 +28,10 @@ const ContactSection = () => {
     setIsSubmitting(true);
     try {
       await emailjs.sendForm(
-        'service_14ggknr', 
-        'template_b1skc65', 
+        'service_fgiww5k', 
+        'template_j6b1mxi', 
         formRef.current, 
-        'ZHlh_wFapRkTRV-rU'
+        'yJ7DTsr7UPTg_-P7u'
       );
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
