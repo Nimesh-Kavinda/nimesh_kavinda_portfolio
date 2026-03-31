@@ -31,14 +31,14 @@ export default function SkillsSection() {
               transition={{ delay: index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="group py-12 md:py-20 border-b border-white/10 hover:bg-white/[0.01] transition-all duration-500 px-4 md:px-8 -mx-4 md:-mx-8"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] xl:grid-cols-[450px_1fr] gap-12 lg:gap-16 items-start">
                 {/* Category Title */}
                 <div className="flex flex-col gap-4">
                   <span className="text-white/20 font-mono text-sm tracking-widest">
                     0{index + 1} //
                   </span>
-                  <h3 className="text-4xl md:text-5xl font-bold uppercase tracking-tight group-hover:text-white transition-colors">
-                    {category.category.split(" // ")[0]} <br />
+                  <h3 className="text-4xl md:text-5xl lg:text-5xl font-bold uppercase tracking-tight group-hover:text-white transition-colors break-words">
+                    {category.category.split(" // ")[0]} <br className="hidden sm:block" />
                     <span className="text-white/30">{category.category.split(" // ")[1]}</span>
                   </h3>
                 </div>
