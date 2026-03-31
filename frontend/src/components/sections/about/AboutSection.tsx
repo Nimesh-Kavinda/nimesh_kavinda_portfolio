@@ -235,7 +235,7 @@ const AboutSection = () => {
                     className="flex flex-col items-center gap-6"
                     options={options}
                     loading={
-                      <div className="w-[600px] h-[800px] flex items-center justify-center text-white/40">
+                      <div className="w-150 h-200 flex items-center justify-center text-white/40">
                          <div className="animate-pulse flex flex-col items-center gap-4">
                             <div className="w-12 h-12 rounded-full border-2 border-white/20 border-t-white animate-spin"></div>
                             Loading Document...

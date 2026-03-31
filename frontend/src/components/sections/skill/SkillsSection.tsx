@@ -29,7 +29,7 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="group py-12 md:py-20 border-b border-white/10 hover:bg-white/[0.01] transition-all duration-500 px-4 md:px-8 -mx-4 md:-mx-8"
+              className="group py-12 md:py-20 border-b border-white/10 hover:bg-white/1 transition-all duration-500 px-4 md:px-8 -mx-4 md:-mx-8"
             >
               <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] xl:grid-cols-[450px_1fr] gap-12 lg:gap-16 items-start">
                 {/* Category Title */}
@@ -37,7 +37,7 @@ export default function SkillsSection() {
                   <span className="text-white/20 font-mono text-sm tracking-widest">
                     0{index + 1} //
                   </span>
-                  <h3 className="text-4xl md:text-5xl lg:text-5xl font-bold uppercase tracking-tight group-hover:text-white transition-colors break-words">
+                  <h3 className="text-4xl md:text-5xl lg:text-5xl font-bold uppercase tracking-tight group-hover:text-white transition-colors wrap-break-word">
                     {category.category.split(" // ")[0]} <br className="hidden sm:block" />
                     <span className="text-white/30">{category.category.split(" // ")[1]}</span>
                   </h3>
@@ -54,7 +54,7 @@ export default function SkillsSection() {
                       <span className="text-xl md:text-3xl font-NeueHaas font-light tracking-tight text-white/50 group-hover/skill:text-white transition-colors duration-300">
                         {skill}
                       </span>
-                      <div className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover/skill:w-full opacity-50" />
+                      <div className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover/skill:w-full opacity-50" />
                     </motion.div>
                   ))}
                 </div>

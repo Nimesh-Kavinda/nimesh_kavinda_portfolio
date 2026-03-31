@@ -116,7 +116,7 @@ export default function CertificateSection() {
           {educationData.map((edu, index) => (
             <div 
               key={edu.id} 
-              className="group relative border-t border-white/10 py-12 md:py-16 transition-all duration-700 hover:bg-white/[0.02]"
+              className="group relative border-t border-white/10 py-12 md:py-16 transition-all duration-700 hover:bg-white/2"
             >
               <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_auto] gap-8 items-start">
                 {/* Year */}
@@ -148,8 +148,8 @@ export default function CertificateSection() {
                   {(edu as any).semesters && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                       {(edu as any).semesters.map((sem: any, sIdx: number) => (
-                        <div key={sIdx} className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 hover:bg-white/[0.05] transition-colors relative overflow-hidden group/sem">
-                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/[0.02] rounded-full blur-3xl -mr-10 -mt-10 group-hover/sem:bg-white/[0.05] transition-colors"></div>
+                        <div key={sIdx} className="bg-white/3 border border-white/5 rounded-2xl p-6 hover:bg-white/5 transition-colors relative overflow-hidden group/sem">
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/2 rounded-full blur-3xl -mr-10 -mt-10 group-hover/sem:bg-white/5 transition-colors"></div>
                           <div className="flex justify-between items-center mb-4 relative z-10">
                             <h4 className="text-white font-bold text-xl">Semester {sem.sem}</h4>
                             <div className="bg-white/10 px-3 py-1 rounded-full border border-white/10">

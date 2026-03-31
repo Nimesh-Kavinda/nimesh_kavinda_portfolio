@@ -66,7 +66,7 @@ export default function FloatingContact() {
                   transition: { delay: index * 0.05 } 
                 }}
                 whileHover={{ scale: 1.05, }}
-                className="w-11 h-11 bg-white/[0.03] border border-white/10 backdrop-blur-2xl rounded-full flex items-center justify-center text-white/50 transition-all duration-300 relative group hover:bg-white/[0.08] hover:border-white/20 active:scale-95"
+                className="w-11 h-11 bg-white/3 border border-white/10 backdrop-blur-2xl rounded-full flex items-center justify-center text-white/50 transition-all duration-300 relative group hover:bg-white/8 hover:border-white/20 active:scale-95"
               >
                 <div className={`transition-colors duration-300 ${link.hoverColor}`}>
                   {link.icon}
@@ -100,7 +100,7 @@ export default function FloatingContact() {
               exit={{ opacity: 0, rotate: 45 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w-5 h-5 flex-shrink-0" />
+              <X className="w-5 h-5 shrink-0" />
             </motion.div>
           ) : (
             <motion.div

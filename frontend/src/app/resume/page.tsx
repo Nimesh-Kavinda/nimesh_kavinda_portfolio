@@ -282,7 +282,7 @@ export default function ResumePage() {
                           <ul className="space-y-1">
                             {sem.subjects.map((sub, i) => (
                               <li key={i} className="text-[11px] text-gray-600 flex items-start gap-1.5 leading-snug">
-                                <span className="text-gray-300 mt-[2px] text-[8px]"></span> {sub}
+                                <span className="text-gray-300 mt-0.5 text-[8px]"></span> {sub}
                               </li>
                             ))}
                           </ul>
