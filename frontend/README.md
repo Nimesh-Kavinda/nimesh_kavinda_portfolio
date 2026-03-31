@@ -1,6 +1,6 @@
-# Portfolio Frontend - Bhanuka Gihan
+# Portfolio Frontend - Nimesh Kavinda
 
-This is the frontend for Bhanuka Gihan's professional portfolio, built with **Next.js 16** and **React 19**. It features a high-end, interactive UI with advanced animations and WebGL-based backgrounds.
+This is the frontend for Nimesh Kavinda's professional portfolio, built with **Next.js 16** and **React 19**. It features a high-end, interactive UI with advanced animations and WebGL-based backgrounds.
 
 ## ✨ Key Features
 
