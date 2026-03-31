@@ -16,31 +16,25 @@ const contactLinks = [
   {
     name: "WhatsApp",
     icon: <FaWhatsapp className="w-5 h-5" />,
-    url: "https://wa.me/94752960845",
+    url: "https://wa.me/94778525115",
     hoverColor: "text-[#25D366]",
   },
   {
     name: "Mail",
     icon: <Mail className="w-5 h-5" />,
-    url: "mailto:nimeshkavinda@email.com",
+    url: "mailto:nimeshkavindakarunasinghe@gmail.com",
     hoverColor: "text-red-400",
   },
   {
     name: "LinkedIn",
     icon: <Linkedin className="w-5 h-5" />,
-    url: "https://linkedin.com",
+    url: "http://www.linkedin.com/in/nimesh-kavinda-b363012b7",
     hoverColor: "text-blue-400",
-  },
-  {
-    name: "Twitter",
-    icon: <Twitter className="w-5 h-5" />,
-    url: "https://twitter.com",
-    hoverColor: "text-sky-400",
   },
   {
     name: "Github",
     icon: <Github className="w-5 h-5" />,
-    url: "https://github.com/nimeshkavinda",
+    url: "https://github.com/Nimesh-Kavinda",
     hoverColor: "text-white",
   },
 ];

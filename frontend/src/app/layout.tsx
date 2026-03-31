@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nimesh Kavinda | Full-Stack Web Developer",
     description: "Explore the portfolio of Nimesh Kavinda and featured web projects across React, Next.js, Laravel, and automation products.",
-    url: "https://github.com/nimeshkavinda",
+    url: "https://github.com/Nimesh-Kavinda",
     siteName: "Nimesh Kavinda Portfolio",
     images: [
       {
@@ -78,10 +78,10 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Nimesh Kavinda",
     "jobTitle": "Full-Stack Web Developer",
-    "url": "https://github.com/nimeshkavinda",
+    "url": "https://github.com/Nimesh-Kavinda",
     "sameAs": [
-      "https://github.com/nimeshkavinda",
-      "https://linkedin.com"
+      "https://github.com/Nimesh-Kavinda",
+      "http://www.linkedin.com/in/nimesh-kavinda-b363012b7"
     ],
     "description": "Nimesh Kavinda is a Full-Stack Web Developer specializing in React, Next.js, Laravel, and modern web application development.",
     "knowsAbout": ["Web Development", "Software Engineering", "React", "Next.js", "Laravel", "PHP"]

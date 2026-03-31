@@ -96,11 +96,11 @@ export default function ResumePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
                 <div className="flex items-center gap-3 group">
                    <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Mail size={14} /></div>
-                   <a href="mailto:nimeshkavinda@email.com" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">nimeshkavinda@email.com</a>
+                   <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">nimeshkavindakarunasinghe@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-3 group">
                    <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Phone size={14} /></div>
-                   <a href="tel:+94752960845" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">+94 75 2960845</a>
+                   <a href="tel:0778525115" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">0778525115</a>
                 </div>
                 <div className="flex items-center gap-3 group">
                    <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><MapPin size={14} /></div>
@@ -108,17 +108,17 @@ export default function ResumePage() {
                 </div>
                 <div className="flex items-center gap-3 group">
                    <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Globe size={14} /></div>
-                   <a href="https://github.com/nimeshkavinda" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">github.com/nimeshkavinda</a>
+                   <a href="https://github.com/Nimesh-Kavinda" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">github.com/Nimesh-Kavinda</a>
                 </div>
               </div>
 
               <div className="flex items-center gap-6 pt-4 border-t border-gray-100 max-w-xs">
-                 <a href="https://github.com/nimeshkavinda" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-black transition-colors flex items-center gap-2 group">
+                 <a href="https://github.com/Nimesh-Kavinda" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-black transition-colors flex items-center gap-2 group">
                     <Github size={20} className="group-hover:scale-110 transition-transform" />
                     <span className="text-[10px] font-black uppercase tracking-widest">Github</span>
                  </a>
                  <div className="w-px h-4 bg-gray-200" />
-                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-black transition-colors flex items-center gap-2 group">
+                 <a href="http://www.linkedin.com/in/nimesh-kavinda-b363012b7" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-black transition-colors flex items-center gap-2 group">
                     <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
                     <span className="text-[10px] font-black uppercase tracking-widest">LinkedIn</span>
                  </a>

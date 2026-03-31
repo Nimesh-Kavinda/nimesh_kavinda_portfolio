@@ -7,10 +7,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "Github", url: "https://github.com/nimeshkavinda" },
-    { name: "LinkedIn", url: "https://linkedin.com" },
-    { name: "Twitter", url: "https://twitter.com" },
-    { name: "Instagram", url: "https://instagram.com" },
+    { name: "Github", url: "https://github.com/Nimesh-Kavinda" },
+    { name: "LinkedIn", url: "http://www.linkedin.com/in/nimesh-kavinda-b363012b7" },
   ];
 
   const scrollToTop = () => {
@@ -34,12 +32,12 @@ export default function Footer() {
             </h2>
             
             <a 
-              href="mailto:nimeshkavinda@email.com" 
+              href="mailto:nimeshkavindakarunasinghe@gmail.com" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl md:text-4xl font-NeueHaas font-light tracking-tight hover:text-white/50 transition-colors duration-500"
             >
-              nimeshkavinda@email.com
+              nimeshkavindakarunasinghe@gmail.com
             </a>
           </motion.div>
 

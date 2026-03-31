@@ -118,10 +118,10 @@ const AboutSection = () => {
 
               <div className="flex items-center  mx-auto lg:mx-0 gap-4">
                 {[
-                  { icon: <Github />, url: "https://github.com/nimeshkavinda" },
-                  { icon: <Linkedin />, url: "https://linkedin.com" },
-                  { icon: <Mail />, url: "mailto:nimeshkavinda@email.com" },
-                  { icon: <Gamepad2 />, url: "https://github.com/nimeshkavinda" }
+                  { icon: <Github />, url: "https://github.com/Nimesh-Kavinda" },
+                  { icon: <Linkedin />, url: "http://www.linkedin.com/in/nimesh-kavinda-b363012b7" },
+                  { icon: <Mail />, url: "mailto:nimeshkavindakarunasinghe@gmail.com" },
+                  { icon: <Gamepad2 />, url: "https://github.com/Nimesh-Kavinda" }
                 ].map((social, i) => (
                   <a 
                     key={i}

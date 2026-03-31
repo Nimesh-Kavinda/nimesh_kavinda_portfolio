@@ -81,14 +81,14 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-2">
                   <span className="text-white/20 font-mono text-[10px] tracking-[0.3em] uppercase">Email</span>
-                  <a href="mailto:nimeshkavinda@email.com" className="block text-white hover:text-white/50 transition-colors text-lg">
-                   nimeshkavinda@email.com
+                  <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="block text-white hover:text-white/50 transition-colors text-lg">
+                   nimeshkavindakarunasinghe@gmail.com
                   </a>
                 </div>
                 <div className="space-y-2">
                   <span className="text-white/20 font-mono text-[10px] tracking-[0.3em] uppercase">Phone {"(WhatsApp)"}</span>
-                  <a href="tel:+94752960845" className="block text-white hover:text-white/50 transition-colors text-lg">
-                    +94 75 2960845
+                  <a href="tel:0778525115" className="block text-white hover:text-white/50 transition-colors text-lg">
+                    0778525115
                   </a>
                 </div>
               </div>
@@ -96,9 +96,8 @@ const ContactSection = () => {
 
             <div className="mt-20 lg:mt-0 pt-12 border-t border-white/10 flex flex-wrap gap-12 sm:gap-20">
               {[
-                { name: "GitHub", url: "https://github.com/nimeshkavinda", icon: <Github /> },
-                { name: "LinkedIn", url: "https://linkedin.com", icon: <Linkedin /> },
-                { name: "Instagram", url: "https://instagram.com", icon: <Instagram /> }
+                { name: "GitHub", url: "https://github.com/Nimesh-Kavinda", icon: <Github /> },
+                  { name: "LinkedIn", url: "http://www.linkedin.com/in/nimesh-kavinda-b363012b7", icon: <Linkedin /> }
               ].map((link) => (
                 <a 
                   key={link.name}

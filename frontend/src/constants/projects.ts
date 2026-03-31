@@ -47,7 +47,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Vite", "Tailwind CSS", "Firebase Auth", "React Query", "Axios", "MUI"],
     liveUrl: "https://busybooks-busybooks-4dznxo-bda4e3-139-59-233-104.traefik.me/",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-cyan-400 to-blue-500",
     longDescription:
@@ -79,7 +79,7 @@ export const portfolioProjects: PortfolioProject[] = [
     images: ["/project/source/Gemini%20Image%20Site/test.png"],
     technologies: ["Next.js", "React", "Tailwind CSS", "DaisyUI", "TypeScript"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-indigo-400 to-blue-500",
     longDescription:
@@ -111,7 +111,7 @@ export const portfolioProjects: PortfolioProject[] = [
     images: ["/project/source/Gemini%20watermark%20remover/watermark%20remover.png"],
     technologies: ["React", "Vite", "Tailwind CSS", "Chrome Extension MV3"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-violet-400 to-indigo-500",
     longDescription:
@@ -146,7 +146,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Vite", "Tailwind CSS", "AOS"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: false,
     color: "from-green-400 to-cyan-500",
     longDescription:
@@ -181,7 +181,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Vite", "Chrome Extension MV3", "JSZip", "Tailwind CSS"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-amber-400 to-orange-500",
     longDescription:
@@ -221,7 +221,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Firebase", "Stripe", "Express", "Socket.IO", "Tailwind CSS"],
     liveUrl: "http://habbittracker-habbittracker-wpjuyt-8e1c6c-139-59-233-104.traefik.me/",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-emerald-400 to-teal-500",
     longDescription:
@@ -257,7 +257,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Vite", "Chrome Extension MV3", "Tailwind CSS"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: false,
     color: "from-rose-400 to-red-500",
     longDescription:
@@ -296,7 +296,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Vite", "MUI", "Framer Motion"],
     liveUrl: "https://redesign-producthub-mo3vbs-ef0dc8-139-59-233-104.traefik.me/",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-sky-400 to-indigo-500",
     longDescription:
@@ -333,7 +333,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Vite", "Tailwind CSS", "Radix UI"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-fuchsia-400 to-violet-500",
     longDescription:
@@ -371,7 +371,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["React", "Vite", "Tailwind CSS", "Chrome Extension MV3", "Firebase"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: false,
     color: "from-purple-400 to-pink-500",
     longDescription:
@@ -403,7 +403,7 @@ export const portfolioProjects: PortfolioProject[] = [
     images: ["/project/source/X-developer%20api/screencapture-localhost-5173-2026-03-17-01_50_25.png"],
     technologies: ["React", "Vite", "Express", "Tailwind CSS"],
     liveUrl: "",
-    githubUrl: "https://github.com/nimeshkavinda",
+    githubUrl: "https://github.com/Nimesh-Kavinda",
     featured: true,
     color: "from-blue-500 to-cyan-400",
     longDescription:
