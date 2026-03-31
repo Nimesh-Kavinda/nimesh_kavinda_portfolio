@@ -1,51 +1,51 @@
-# Nimesh Kavinda - Professional Portfolio
+# Portfolio Frontend - Nimesh Kavinda
 
-Welcome to the repository for **Nimesh Kavinda's** professional portfolio website. This project showcases my experience, projects, skills, and certifications built with a modern, high-performance web stack.
+This is the frontend for Nimesh Kavinda's professional portfolio, built with **Next.js 16** and **React 19**. It features a high-end, interactive UI with advanced animations and WebGL-based backgrounds.
 
-## 🌟 Live Demo
+## ✨ Key Features
 
-*(Add your live URL here, e.g., https://yourdomain.com)*
+- **High-Performance Backgrounds**: Custom-built `Galaxy`, `Beams`, and `LightPillar` visual effects using Three.js and OGL.
+- **Interactive Cursor Ecosystem**: `SplashCursor` for fluid-like interactions and `TargetCursor` for precise navigation.
+- **Smooth Navigation**: Integrated with **Lenis** for smooth kinetic scrolling.
+- **Dynamic Content**: Portfolio data (Experiences, Skills, Projects) is managed via typed constants for easy maintenance.
+- **Responsive Resume**: Built-in resume viewer with PDF download functionality (powered by `react-pdf`).
+- **Modern Animations**: Extensive use of **Framer Motion** and **GSAP** for micro-interactions and scroll-based triggers.
 
-## 📂 Project Structure
+## 🛠️ Technology Stack
 
-This repository is organized into the following main directories:
+- **Framework**: Next.js 16 (App Router)
+- **UI & Logic**: React 19, TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion 12, GSAP, AOS
+- **3D/WebGL**: Three.js, @react-three/fiber, OGL
+- **Icons**: Lucide React, React Icons
+- **Forms**: EmailJS for contact functionality
 
-- **/frontend**: Contains the complete Next.js 16/React 19 source code for the portfolio application.
-- **/public**: Stores static assets such as images, project resources, and resume.
+## 🚀 Getting Started
 
-For specific details about the frontend implementation, please see the [Frontend README](frontend/README.md).
-
-## 🚀 Key Technologies
-
-This portfolio is built using bleeding-edge web technologies:
-- **Next.js 16** (App Router)
-- **React 19**
-- **Tailwind CSS 4**
-- **Three.js & WebGL** (for immersive 3D backgrounds and particle effects)
-- **Framer Motion & GSAP** (for complex scroll-based animations and transitions)
-
-## 🛠️ Features
-
-- Immersive WebGL-powered hero background (`Galaxy`, `Beams`, etc.)
-- Fluid cursor interactions (`SplashCursor`, `TargetCursor`)
-- Integrated PDF Resume viewer
-- Interactive Projects and Experience timelines
-
-## 🏗️ Getting Started
-
-To run the project locally, navigate to the `frontend` directory and install the necessary dependencies:
+First, install the dependencies:
 
 ```bash
-cd frontend
 npm install
+```
+
+Then, run the development server:
+
+```bash
 npm run dev
 ```
 
-Visit `http://localhost:3000` to view the application.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the results.
 
-## 🤝 Contact
+## 📂 Project Structure
 
-Feel free to reach out to me via the contact form on the live site, or connect with me on LinkedIn/GitHub.
+- `src/app`: Next.js App Router pages and layouts.
+- `src/components`: Reusable UI components and page sections.
+- `src/constants`: Typed data for the portfolio (skills, experience, etc.).
+- `src/context`: React Context providers (Global loading state, etc.).
+- `src/styles`: Global CSS and Tailwind configurations.
+- `public`: Static assets (Images, Resume PDF).
 
----
-*Created and maintained by Nimesh Kavinda.*
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
