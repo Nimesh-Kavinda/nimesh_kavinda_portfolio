@@ -26,16 +26,16 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="text-[12vw] lg:text-[8rem] font-bilmond leading-[0.85] tracking-tighter uppercase text-white mb-12">
-              Let&apos;s <br />
-              <span className="text-white/20">Connect</span>
+            <h2 className="text-[12vw] lg:text-[7.5rem] font-bilmond leading-[0.85] tracking-tighter uppercase text-white mb-12">
+              Work <br />
+              <span className="text-white/20">Together</span>
             </h2>
-            
+
             <a
               href="mailto:nimeshkavindakarunasinghe@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl md:text-4xl font-NeueHaas font-light tracking-tight hover:text-white/50 transition-colors duration-500 break-all"
+              className="text-[4.5vw] sm:text-2xl md:text-4xl font-NeueHaas font-light tracking-tight hover:text-white/50 transition-colors duration-500"
             >
               nimeshkavindakarunasinghe@gmail.com
             </a>
