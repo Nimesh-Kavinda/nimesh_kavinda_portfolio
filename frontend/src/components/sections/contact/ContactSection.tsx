@@ -78,16 +78,16 @@ const ContactSection = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="space-y-2">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12">
+                <div className="space-y-2 min-w-0">
                   <span className="text-white/20 font-mono text-[10px] tracking-[0.3em] uppercase">Email</span>
-                  <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="block text-white hover:text-white/50 transition-colors text-lg">
+                  <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="block text-white hover:text-white/50 transition-colors text-base md:text-lg break-all">
                    nimeshkavindakarunasinghe@gmail.com
                   </a>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 min-w-0">
                   <span className="text-white/20 font-mono text-[10px] tracking-[0.3em] uppercase">Phone {"(WhatsApp)"}</span>
-                  <a href="tel:0778525115" className="block text-white hover:text-white/50 transition-colors text-lg">
+                  <a href="tel:0778525115" className="block text-white hover:text-white/50 transition-colors text-base md:text-lg">
                     0778525115
                   </a>
                 </div>
@@ -123,7 +123,7 @@ const ContactSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 <div className="relative group">
                   <input
                     type="text"

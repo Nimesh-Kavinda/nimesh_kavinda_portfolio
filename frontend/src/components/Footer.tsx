@@ -31,11 +31,11 @@ export default function Footer() {
               <span className="text-white/20">Connect</span>
             </h2>
             
-            <a 
-              href="mailto:nimeshkavindakarunasinghe@gmail.com" 
+            <a
+              href="mailto:nimeshkavindakarunasinghe@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl md:text-4xl font-NeueHaas font-light tracking-tight hover:text-white/50 transition-colors duration-500"
+              className="text-2xl md:text-4xl font-NeueHaas font-light tracking-tight hover:text-white/50 transition-colors duration-500 break-all"
             >
               nimeshkavindakarunasinghe@gmail.com
             </a>

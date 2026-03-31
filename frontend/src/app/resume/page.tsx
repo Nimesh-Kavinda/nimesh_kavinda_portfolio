@@ -96,7 +96,7 @@ export default function ResumePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
                 <div className="flex items-center gap-3 group">
                    <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Mail size={14} /></div>
-                   <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">nimeshkavindakarunasinghe@gmail.com</a>
+                   <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider md:tracking-widest text-gray-600 hover:text-black transition-colors break-all">nimeshkavindakarunasinghe@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-3 group">
                    <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Phone size={14} /></div>
