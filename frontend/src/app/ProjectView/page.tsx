@@ -3,7 +3,6 @@
 import React, { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
   Github,
@@ -13,6 +12,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { portfolioProjects } from "@/constants/projects";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects = portfolioProjects;
 
@@ -22,9 +22,16 @@ function ProjectContent() {
   const id = searchParams.get("id");
   const project = projects.find((p) => p.id === Number(id)) || projects[0];
 
+  const fallbackImages = React.useMemo(() => {
+    const images = Array.isArray(project.images) ? project.images : [];
+    if (images.length > 0) return images;
+    return project.image ? [project.image] : [];
+  }, [project]);
+
+  const [projectImages, setProjectImages] = React.useState<string[]>(fallbackImages);
+  
   // Image Slider Logic
   const [currentImg, setCurrentImg] = React.useState(0);
-  const projectImages = project.images || [project.images];
   const imageCount = projectImages.length;
 
   const nextImg = () => {
@@ -45,6 +52,46 @@ function ProjectContent() {
 
     return () => clearInterval(interval);
   }, [imageCount]);
+
+  React.useEffect(() => {
+    setProjectImages(fallbackImages);
+  }, [project.id, fallbackImages]);
+
+  React.useEffect(() => {
+    const getFolderFromPath = (imagePath: string) => {
+      const normalized = imagePath.split("?")[0];
+      const lastSlash = normalized.lastIndexOf("/");
+      if (lastSlash <= 0) return "";
+      return decodeURIComponent(normalized.slice(1, lastSlash));
+    };
+
+    const folder = getFolderFromPath(project.image);
+    if (!folder) return;
+
+    let isActive = true;
+
+    const loadImages = async () => {
+      try {
+        const response = await fetch(`/api/project-images?folder=${encodeURIComponent(folder)}`);
+        if (!response.ok) return;
+
+        const data = (await response.json()) as { images?: string[] };
+        if (!isActive) return;
+
+        if (Array.isArray(data.images) && data.images.length > 0) {
+          setProjectImages(data.images);
+        }
+      } catch {
+        // Keep fallback images when API lookup fails.
+      }
+    };
+
+    void loadImages();
+
+    return () => {
+      isActive = false;
+    };
+  }, [project.image]);
 
   return (
     <div className="min-h-screen bg-black text-white font-NeueHaas selection:bg-blue-400/30">
@@ -181,7 +228,7 @@ function ProjectContent() {
                       e.preventDefault();
                       prevImg();
                     }}
-                    className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all pointer-events-auto"
+                    className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all pointer-events-auto z-10"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
@@ -190,19 +237,19 @@ function ProjectContent() {
                       e.preventDefault();
                       nextImg();
                     }}
-                    className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all pointer-events-auto"
+                    className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all pointer-events-auto z-10"
                   >
                     <ChevronRight className="w-6 h-6" />
                   </button>
                 </div>
 
                 {/* Progress Indicators */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10 flex-wrap justify-center max-w-[80%]">
                   {projectImages.map((_, i) => (
                     <button
                       key={i}
                       onClick={() => setCurrentImg(i)}
-                      className={`h-1 rounded-full transition-all duration-300 ${i === currentImg ? "w-8 bg-white" : "w-2 bg-white/20"}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${i === currentImg ? "w-8 bg-white" : "w-1.5 bg-white/40 hover:bg-white/60"}`}
                     />
                   ))}
                 </div>

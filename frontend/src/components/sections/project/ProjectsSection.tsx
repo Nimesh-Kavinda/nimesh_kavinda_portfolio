@@ -71,7 +71,10 @@ export default function ProjectsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-          {currentProjects.map((project, index) => (
+          {currentProjects.map((project, index) => {
+            const cardImages = project.images?.length > 0 ? project.images : [project.image];
+
+            return (
             <div
               key={project.id}
               onClick={() => handleProjectClick(project.id)}
@@ -85,14 +88,25 @@ export default function ProjectsSection() {
               )}
 
                 <div className="relative h-48 bg-gray-800 overflow-hidden transform-gpu">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority={index < 3}
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
-                  />
+                  <div className="grid grid-cols-2 grid-rows-2 h-full gap-0.5">
+                    {cardImages.slice(0, 4).map((imageSrc, imageIndex) => (
+                      <div key={`${project.id}-${imageIndex}`} className="relative overflow-hidden">
+                        <Image
+                          src={imageSrc}
+                          alt={`${project.title} ${imageIndex + 1}`}
+                          fill
+                          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                          priority={index < 3 && imageIndex === 0}
+                          className="object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  {cardImages.length > 4 && (
+                    <div className="absolute bottom-2 right-2 px-2 py-1 text-[10px] rounded-full bg-black/70 text-white border border-white/20">
+                      +{cardImages.length - 4} more
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6 relative flex flex-col grow overflow-hidden">
@@ -101,19 +115,19 @@ export default function ProjectsSection() {
                       <span className="px-3 py-1 bg-blue-400/20 backdrop-blur-sm  border-blue-400/30 text-blue-400 text-xs  rounded-full">
                         {project.category}
                       </span>
-                      {(project as any).company && (
+                      {project.company && (
                         <div className="flex items-center gap-1.5 text-gray-400">
                           <Building2 className="w-3.5 h-3.5" />
                           <span className="text-[10px] uppercase tracking-wider font-bold">
-                            {(project as any).company}
+                            {project.company}
                           </span>
                         </div>
                       )}
                     </div>
-                    {(project as any).status && (
+                    {project.status && (
                       <div>
                         <span className="px-2 py-0.5  border-red-500/30 text-red-500 text-[10px] font-bold rounded-full animate-pulse">
-                          {(project as any).status}
+                          {project.status}
                         </span>
                       </div>
                     )}
@@ -155,7 +169,8 @@ export default function ProjectsSection() {
                   </div>
                 </div>
               </div>
-            ))}
+            );
+            })}
         </div>
 
         {/* Minimalistic Pagination */}

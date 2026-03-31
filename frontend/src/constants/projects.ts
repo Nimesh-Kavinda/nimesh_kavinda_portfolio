@@ -32,7 +32,19 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Digital library app with personalized recommendations, reading, and listening workflows.",
     image: "/project/source/Busy%20Book/Screenshot%20(132).png",
-    images: ["/project/source/Busy%20Book/Screenshot%20(132).png"],
+    images: [
+      "/project/source/Busy%20Book/Screenshot%20(132).png",
+      "/project/source/Busy%20Book/Screenshot%20(133).png",
+      "/project/source/Busy%20Book/Screenshot%20(134).png",
+      "/project/source/Busy%20Book/Screenshot%20(135).png",
+      "/project/source/Busy%20Book/Screenshot%20(136).png",
+      "/project/source/Busy%20Book/Screenshot%20(137).png",
+      "/project/source/Busy%20Book/Screenshot%20(138).png",
+      "/project/source/Busy%20Book/Screenshot%20(139).png",
+      "/project/source/Busy%20Book/Screenshot%20(140).png",
+      "/project/source/Busy%20Book/Screenshot%20(141).png",
+      "/project/source/Busy%20Book/Screenshot%20(142).png",
+    ],
     technologies: ["React", "Vite", "Tailwind CSS", "Firebase Auth", "React Query", "Axios", "MUI"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
@@ -128,7 +140,10 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Automation-focused landing and privacy experience for Google Labs AI tooling.",
     image: "/project/source/G%20labs%20automater/screencapture-localhost-5173-2026-03-17-00_40_20.png",
-    images: ["/project/source/G%20labs%20automater/screencapture-localhost-5173-2026-03-17-00_40_20.png"],
+    images: [
+      "/project/source/G%20labs%20automater/screencapture-localhost-5173-2026-03-17-00_40_20.png",
+      "/project/source/G%20labs%20automater/screencapture-localhost-5173-2026-03-17-00_40_35.png",
+    ],
     technologies: ["React", "Vite", "Tailwind CSS", "AOS"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
@@ -160,7 +175,10 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Bulk Gmail attachment downloader with sender/date filters and ZIP bundling.",
     image: "/project/source/Badgy/Screenshot%20(144).png",
-    images: ["/project/source/Badgy/Screenshot%20(144).png"],
+    images: [
+      "/project/source/Badgy/Screenshot%20(144).png",
+      "/project/source/Badgy/Screenshot%20(145).png",
+    ],
     technologies: ["React", "Vite", "Chrome Extension MV3", "JSZip", "Tailwind CSS"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
@@ -192,7 +210,15 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Habit tracking platform with subscriptions, analytics, and real-time sync.",
     image: "/project/source/Habit%20Traker/Screenshot%20(146).png",
-    images: ["/project/source/Habit%20Traker/Screenshot%20(146).png"],
+    images: [
+      "/project/source/Habit%20Traker/Screenshot%20(146).png",
+      "/project/source/Habit%20Traker/Screenshot%20(147).png",
+      "/project/source/Habit%20Traker/Screenshot%20(148).png",
+      "/project/source/Habit%20Traker/Screenshot%20(149).png",
+      "/project/source/Habit%20Traker/Screenshot%20(150).png",
+      "/project/source/Habit%20Traker/Screenshot%20(151).png",
+      "/project/source/Habit%20Traker/Screenshot%20(152).png",
+    ],
     technologies: ["React", "Firebase", "Stripe", "Express", "Socket.IO", "Tailwind CSS"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
@@ -224,7 +250,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Pinterest analytics and sorting extension with custom exports and viral insights.",
     image: "/project/source/Pintrest%20Pin%20Sorter/Screenshot%20(106).png",
-    images: ["/project/source/Pintrest%20Pin%20Sorter/Screenshot%20(106).png"],
+    images: [
+      "/project/source/Pintrest%20Pin%20Sorter/Screenshot%20(106).png",
+      "/project/source/Pintrest%20Pin%20Sorter/Screenshot%20(109).png",
+      "/project/source/Pintrest%20Pin%20Sorter/Screenshot%20(155).png",
+    ],
     technologies: ["React", "Vite", "Chrome Extension MV3", "Tailwind CSS"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
@@ -256,7 +286,14 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Project and content operations dashboard with AI-assisted content workflows.",
     image: "/project/source/Product%20Hub/Screenshot%20(156).png",
-    images: ["/project/source/Product%20Hub/Screenshot%20(156).png"],
+    images: [
+      "/project/source/Product%20Hub/Screenshot%20(156).png",
+      "/project/source/Product%20Hub/Screenshot%20(157).png",
+      "/project/source/Product%20Hub/Screenshot%20(158).png",
+      "/project/source/Product%20Hub/Screenshot%20(159).png",
+      "/project/source/Product%20Hub/Screenshot%20(160).png",
+      "/project/source/Product%20Hub/Screenshot%202026-03-01%20124017.png",
+    ],
     technologies: ["React", "Vite", "MUI", "Framer Motion"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
@@ -288,7 +325,12 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Text-to-video converter UI with prompt batching and advanced generation settings.",
     image: "/project/source/Text%20to%20Video/Screenshot%20(161).png",
-    images: ["/project/source/Text%20to%20Video/Screenshot%20(161).png"],
+    images: [
+      "/project/source/Text%20to%20Video/Screenshot%20(161).png",
+      "/project/source/Text%20to%20Video/Screenshot%20(162).png",
+      "/project/source/Text%20to%20Video/Screenshot%20(163).png",
+      "/project/source/Text%20to%20Video/Screenshot%20(164).png",
+    ],
     technologies: ["React", "Vite", "Tailwind CSS", "Radix UI"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
@@ -320,7 +362,13 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Virtual try-on extension with apparel detection and side panel AI workflow.",
     image: "/project/source/Wear%20it/Screenshot%20(177).png",
-    images: ["/project/source/Wear%20it/Screenshot%20(177).png"],
+    images: [
+      "/project/source/Wear%20it/Screenshot%20(177).png",
+      "/project/source/Wear%20it/Screenshot%20(178).png",
+      "/project/source/Wear%20it/Screenshot%20(179).png",
+      "/project/source/Wear%20it/Screenshot%20(180).png",
+      "/project/source/Wear%20it/Screenshot%20(181).png",
+    ],
     technologies: ["React", "Vite", "Tailwind CSS", "Chrome Extension MV3", "Firebase"],
     liveUrl: "https://github.com/nimeshkavinda",
     githubUrl: "https://github.com/nimeshkavinda",
