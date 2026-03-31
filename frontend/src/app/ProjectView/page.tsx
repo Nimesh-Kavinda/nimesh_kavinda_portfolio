@@ -343,18 +343,37 @@ function ProjectContent() {
                 </div>
 
                 <div className="space-y-3 pt-8 border-t border-white/5">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10 text-white  overflow-hidden transition-all duration-300"
-                  >
-                    <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                    <span className="relative z-10 flex items-center justify-between w-full group-hover:text-black transition-colors duration-300">
-                      Live Project
-                      <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </span>
-                  </a>
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10 text-white  overflow-hidden transition-all duration-300"
+                    >
+                      <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                      <span className="relative z-10 flex items-center justify-between w-full group-hover:text-black transition-colors duration-300">
+                        Live Project
+                        <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      </span>
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="group relative flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10  overflow-hidden cursor-not-allowed w-full text-left"
+                    >
+                      <span className="absolute inset-0 bg-red-500/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                      <span className="relative z-10 flex items-center justify-between w-full group-hover:text-red-400 transition-colors duration-300">
+                        <span className="group-hover:hidden">
+                          Live Project
+                        </span>
+                        <span className="hidden group-hover:flex items-center gap-2">
+                          Not available
+                        </span>
+                        <ArrowUpRight className="w-5 h-5 opacity-50" />
+                      </span>
+                    </button>
+                  )}
+                  
                   <button
                     disabled
                     className="group relative flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10  overflow-hidden cursor-not-allowed w-full text-left"
