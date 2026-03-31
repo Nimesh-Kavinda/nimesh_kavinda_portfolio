@@ -11,6 +11,7 @@ import Heropage from '@/components/sections/hero/Heropage';
 import SkillsSection from '@/components/sections/skill/SkillsSection';
 import ExperienceSection from '@/components/sections/experience/ExperienceSection';
 import ProjectsSection from '@/components/sections/project/ProjectsSection';
+import GithubSection from '@/components/sections/github/GithubSection';
 import TextScroll from "@/components/sections/Textscroll/textSroll";
 
 import CertificateSection from '@/components/sections/certificate/CertifiateSection';
@@ -69,6 +70,7 @@ export default function HomePage() {
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
+        <GithubSection />
         <TextScroll />
         <CertificateSection />
         <RecommendationSection />
