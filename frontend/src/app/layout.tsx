@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import "../styles/index.css";
 import { LoadingProvider } from "../context/LoadingContext";
 import ClientLayout from "../components/ClientLayout";
+
+export const metadata: Metadata = {
+  title: "Nimesh Kavinda",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
+};
 
 export default function RootLayout({
   children,
