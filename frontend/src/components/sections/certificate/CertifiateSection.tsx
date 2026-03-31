@@ -12,16 +12,6 @@ export default function CertificateSection() {
   const educationData = [
     {
       id: 1,
-      year: "2018 - 2020",
-      title: "GCE Advanced Level",
-      institution: "KG/Bandaranayake M.V",
-      location: "Kegalle, Sri Lanka",
-      description:
-        "Completed undergraduate studies with a focus on computer science fundamentals, mathematics, and software engineering principles.",
-      icon: <BookOpen className="w-5 h-5" />,
-    },
-    {
-      id: 2,
       year: "2023 - 2025",
       title: "Higher National Diploma in Information Technology",
       institution: "SLIATE",
@@ -84,6 +74,17 @@ export default function CertificateSection() {
         ],
       icon: <GraduationCap className="w-5 h-5" />,
     },
+    {
+      id: 2,
+      year: "2018 - 2020",
+      title: "GCE Advanced Level",
+      institution: "Kegalu Vidyalaya",
+      location: "Kegalle, Sri Lanka",
+      description:
+        "Completed G.C.E. Advanced Level in the Science stream, successfully studying Combined Mathematics, Physics, and Chemistry.",
+      icon: <BookOpen className="w-5 h-5" />,
+    },
+
     // {
     //   id: 3,
     //   year: "2018 - 2022",

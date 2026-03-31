@@ -76,9 +76,9 @@ export default function ResumePage() {
     {
       year: "2018 - 2020",
       title: "GCE Advanced Level",
-      institution: "KG/Bandaranayake M.V",
+      institution: "Kegalu Vidyalaya",
       location: "Kegalle, Sri Lanka",
-      description: "Completed undergraduate studies with a focus on computer science fundamentals, mathematics, and software engineering principles."
+      description: "Completed G.C.E. Advanced Level in the Science stream, successfully studying Combined Mathematics, Physics, and Chemistry."
     }
   ];
 
