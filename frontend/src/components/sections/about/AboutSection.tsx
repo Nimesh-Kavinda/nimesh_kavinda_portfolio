@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail, X, Download, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Icon, Gamepad2 } from 'lucide-react';
 import Link from 'next/link';
@@ -17,6 +17,16 @@ const AboutSection = () => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [scale, setScale] = useState(1.0);
   
+  const roles = ["Software Engineer", "Full Stack Developer"];
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 3000); // Change role every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   const options = useMemo(() => ({
     disableRange: true,
     disableStream: true
@@ -67,10 +77,23 @@ const AboutSection = () => {
             <div className="space-y-8">
               <h3 className="text-4xl md:text-6xl font-bold uppercase  leading-[0.9]">
                 <span className='text-[#F3F4F4]'>Nimesh Kavinda</span> <br />
-                <span className='text-[#F3F4F4]/40'>Full-Stack Web Developer</span>
+                <span className='text-[#F3F4F4]/40 inline-block h-[1em] overflow-visible relative min-w-[300px]'>
+                  <AnimatePresence mode="popLayout">
+                    <motion.span
+                      key={currentRoleIndex}
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -20, opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                      className="absolute left-0 top-0 whitespace-nowrap"
+                    >
+                      {roles[currentRoleIndex]}
+                    </motion.span>
+                  </AnimatePresence>
+                </span>
               </h3>
               
-              <p className="text-[#F3F4F4]/70 font-NeueHaas leading-relaxed text-xl md:text-2xl max-w-3xl font-light tracking-tight italic">
+              <p className="text-[#F3F4F4]/70 font-NeueHaas leading-relaxed text-xl md:text-2xl max-w-3xl font-light tracking-tight italic mt-6">
                 "I build modern web products across frontend, backend, and browser extension ecosystems. My focus is turning real business ideas into scalable and user-friendly digital experiences."
               </p>
             </div>
