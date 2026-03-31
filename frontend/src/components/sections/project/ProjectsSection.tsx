@@ -88,25 +88,14 @@ export default function ProjectsSection() {
               )}
 
                 <div className="relative h-48 bg-gray-800 overflow-hidden transform-gpu">
-                  <div className="grid grid-cols-2 grid-rows-2 h-full gap-0.5">
-                    {cardImages.slice(0, 4).map((imageSrc, imageIndex) => (
-                      <div key={`${project.id}-${imageIndex}`} className="relative overflow-hidden">
-                        <Image
-                          src={imageSrc}
-                          alt={`${project.title} ${imageIndex + 1}`}
-                          fill
-                          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                          priority={index < 3 && imageIndex === 0}
-                          className="object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  {cardImages.length > 4 && (
-                    <div className="absolute bottom-2 right-2 px-2 py-1 text-[10px] rounded-full bg-black/70 text-white border border-white/20">
-                      +{cardImages.length - 4} more
-                    </div>
-                  )}
+                  <Image
+                    src={cardImages[0]}
+                    alt={`${project.title} cover`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index < 3}
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
+                  />
                 </div>
 
                 <div className="p-6 relative flex flex-col grow overflow-hidden">
