@@ -42,7 +42,7 @@ export default function Footer() {
                 <span className="block break-all sm:break-normal">nimeshkavindakarunasinghe@gmail.com</span>
                 <div className="absolute bottom-0 left-0 w-full h-px bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
               </div>
-              <div className="w-10 h-10 md:w-16 md:h-16 rounded-full border border-[#1D546D] flex-shrink-0 flex items-center justify-center group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-500">
+              <div className="w-10 h-10 md:w-16 md:h-16 rounded-full border border-[#1D546D] shrink-0 flex items-center justify-center group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-500">
                 <ArrowUp className="w-4 h-4 md:w-6 md:h-6 rotate-45 group-hover:rotate-0 transition-transform duration-500" />
               </div>
             </a>
