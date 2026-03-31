@@ -87,6 +87,9 @@ export default function GithubSection() {
                   <div className="text-2xl font-mono font-bold">{data.user.followers}</div>
                 </div>
               </div>
+
+
+
             </div>
           </div>
 
