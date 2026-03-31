@@ -16,34 +16,34 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#061E29] text-[#F3F4F4] py-24 px-6 md:px-12 border-t border-[#1D546D]/50 overflow-hidden">
-      <div className="max-w-350 mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start pb-24 md:pb-40">
+    <footer className="bg-[#061E29] text-[#F3F4F4] py-16 md:py-24 px-6 md:px-12 border-t border-[#1D546D]/50 overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start pb-16 md:pb-24">
           {/* Main Title Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-8 flex flex-col gap-12"
+            className="lg:col-span-8 flex flex-col gap-8 md:gap-12"
           >
             <div className="overflow-hidden">
-              <h2 className="text-[clamp(4rem,15vw,12rem)] font-bilmond leading-[0.8] tracking-[-0.02em] uppercase text-[#F3F4F4]">
-                <span className="block hover:translate-x-4 transition-transform duration-500 ease-out">Let&apos;s</span>
-                <span className="block text-[#F3F4F4]/30 hover:translate-x-8 transition-transform duration-500 ease-out italic pr-4">Collaborate</span>
+              <h2 className="text-[clamp(3rem,10vw,8rem)] font-bilmond leading-[0.9] tracking-[-0.02em] uppercase text-[#F3F4F4] flex flex-col md:block">
+                <span className="inline-block hover:translate-x-2 transition-transform duration-500 ease-out">Let&apos;s</span>
+                <span className="inline-block text-[#F3F4F4]/30 hover:translate-x-4 transition-transform duration-500 ease-out italic pr-4 md:ml-6">Talk</span>
               </h2>
             </div>
             
             <a
               href="mailto:nimeshkavindakarunasinghe@gmail.com"
-              className="group inline-flex items-center gap-6 text-xl md:text-3xl font-NeueHaas font-light tracking-wide text-[#F3F4F4]/80 hover:text-white transition-colors w-fit"
+              className="group inline-flex items-center gap-4 md:gap-6 text-lg md:text-3xl font-NeueHaas font-light tracking-wide text-[#F3F4F4]/80 hover:text-white transition-colors w-full sm:w-fit"
             >
-              <div className="relative overflow-hidden pb-1">
-                <span>nimeshkavindakarunasinghe@gmail.com</span>
+              <div className="relative overflow-hidden pb-1 flex-1 sm:flex-none">
+                <span className="block break-all sm:break-normal">nimeshkavindakarunasinghe@gmail.com</span>
                 <div className="absolute bottom-0 left-0 w-full h-px bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
               </div>
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-[#1D546D] flex items-center justify-center group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-500">
-                <ArrowUp className="w-5 h-5 md:w-6 md:h-6 rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+              <div className="w-10 h-10 md:w-16 md:h-16 rounded-full border border-[#1D546D] flex-shrink-0 flex items-center justify-center group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-500">
+                <ArrowUp className="w-4 h-4 md:w-6 md:h-6 rotate-45 group-hover:rotate-0 transition-transform duration-500" />
               </div>
             </a>
           </motion.div>
@@ -54,7 +54,7 @@ export default function Footer() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="lg:col-span-4 flex flex-row lg:flex-col justify-between items-start lg:items-end gap-16"
+            className="lg:col-span-4 flex flex-row lg:flex-col justify-between items-start lg:items-end gap-12"
           >
             <div className="flex flex-col gap-8">
               <span className="text-xs font-mono uppercase tracking-[0.3em] text-[#F3F4F4]/40 mb-2">Socials</span>
@@ -98,7 +98,7 @@ export default function Footer() {
 
         {/* Bottom Bar Full Width */}
         <div className="pt-8 border-t border-[#1D546D]/30 flex flex-col md:flex-row justify-between items-center gap-6 text-[#F3F4F4]/40">
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 text-center md:text-left">
             <span className="text-xs uppercase tracking-[0.2em] font-light">
               © {currentYear} Nimesh Kavinda
             </span>

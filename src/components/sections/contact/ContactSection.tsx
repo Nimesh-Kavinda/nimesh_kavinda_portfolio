@@ -179,7 +179,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting || isSubmitted}
-                className="relative group w-full h-20 rounded-full border border-white/20 hover:border-white transition-colors overflow-hidden disabled:opacity-50"
+                className="relative group w-full h-20 rounded-full border border-white/20 hover:border-white transition-colors overflow-hidden disabled:opacity-50 cursor-pointer"
               >
                 <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 <span className="relative z-10 flex items-center justify-center gap-4 text-sm font-bold uppercase tracking-[0.3em] text-[#F3F4F4] group-hover:text-[#061E29] transition-colors">
