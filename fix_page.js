@@ -1,0 +1,1 @@
+const fs = require("fs"); let b = fs.readFileSync("./frontend/src/app/page.tsx", "utf8"); b = b.replace(/{\/\* Pattern Background for all sections except Heropage \*\/}\n\s*<div\n\s*className="absolute inset-0 -z-10"[\s\S]*?\/>/, ""); fs.writeFileSync("./frontend/src/app/page.tsx", b);

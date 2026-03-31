@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white py-24 px-6 md:px-12 border-t border-white/5 overflow-hidden">
+    <footer className="bg-[#061E29] text-[#F3F4F4] py-24 px-6 md:px-12 border-t border-[#1D546D]/50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-end">
           {/* Left Side: Big Call to Action */}
@@ -26,16 +26,16 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="text-[12vw] lg:text-[7.5rem] font-bilmond leading-[0.85] tracking-tighter uppercase text-white mb-12">
+            <h2 className="text-[12vw] lg:text-[7.5rem] font-bilmond leading-[0.85] tracking-tighter uppercase text-[#F3F4F4] mb-12">
               Work <br />
-              <span className="text-white/20">Together</span>
+              <span className="text-[#F3F4F4]/20">Together</span>
             </h2>
 
             <a
               href="mailto:nimeshkavindakarunasinghe@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[4.5vw] sm:text-2xl md:text-4xl font-NeueHaas font-light tracking-tight hover:text-white/50 transition-colors duration-500"
+              className="text-[4.5vw] sm:text-2xl md:text-4xl font-NeueHaas font-light tracking-tight hover:text-[#F3F4F4]/50 transition-colors duration-500"
             >
               nimeshkavindakarunasinghe@gmail.com
             </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -5 }}
-                  className="text-sm uppercase tracking-[0.3em] font-bold text-white/40 hover:text-white transition-colors duration-300"
+                  className="text-sm uppercase tracking-[0.3em] font-bold text-[#F3F4F4]/40 hover:text-[#F3F4F4] transition-colors duration-300"
                 >
                   {social.name}
                 </motion.a>
@@ -60,10 +60,10 @@ export default function Footer() {
 
             <button
               onClick={scrollToTop}
-              className="group flex items-center gap-4 text-sm uppercase tracking-[0.3em] font-bold text-white/20 hover:text-white transition-colors duration-500"
+              className="group flex items-center gap-4 text-sm uppercase tracking-[0.3em] font-bold text-[#F3F4F4]/20 hover:text-[#F3F4F4] transition-colors duration-500"
             >
               Back to Top
-              <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white transition-colors">
+              <div className="w-10 h-10 rounded-full border border-[#5F9598]/20 flex items-center justify-center group-hover:border-white transition-colors">
                 <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
               </div>
             </button>
@@ -71,20 +71,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-32 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="mt-32 pt-10 border-t border-[#1D546D]/50 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col gap-2 scale-75 md:scale-100 items-center md:items-start">
-            <span className="text-[10px] uppercase tracking-[0.5em] text-white/20 font-bold">
+            <span className="text-[10px] uppercase tracking-[0.5em] text-[#F3F4F4]/20 font-bold">
               © {currentYear} | NIMESH KAVINDA
             </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white/10 font-bold">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-[#F3F4F4]/10 font-bold">
               Designed & Developed by Nimesh Kavinda
             </span>
           </div>
 
           <div className="flex items-center gap-8">
             <div className="flex flex-col items-center md:items-end gap-1">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold">Local Time</span>
-              <span className="text-xs font-mono text-white/40 uppercase">Sri Lanka</span>
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#F3F4F4]/20 font-bold">Local Time</span>
+              <span className="text-xs font-mono text-[#F3F4F4]/40 uppercase">Sri Lanka</span>
             </div>
             
             <motion.div 

@@ -68,17 +68,21 @@ export default function RecommendationSection() {
   ];
 
   return (
-    <section id="recommendations" className="py-24  text-white overflow-hidden">
+    <section id="recommendations" className="py-24  text-[#F3F4F4] overflow-hidden" style={{
+        backgroundColor: "#061E29",
+        backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
+        backgroundSize: "30px 30px"
+      }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         {/* Header */}
         <motion.h2 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[12vw] lg:text-[10rem] font-bilmond leading-[0.85] tracking-tighter uppercase text-white"
+          className="text-[12vw] lg:text-[10rem] font-bilmond leading-[0.85] tracking-tighter uppercase text-[#F3F4F4]"
         >
           Kind // <br />
-          <span className="text-white/20">Words</span>
+          <span className="text-[#F3F4F4]/20">Words</span>
         </motion.h2>
       </div>
 
@@ -89,31 +93,31 @@ export default function RecommendationSection() {
           {[...recommendations, ...recommendations].map((rec, index) => (
             <div
               key={`${rec.id}-${index}`}
-              className="w-[450px] md:w-[600px] flex-shrink-0 flex flex-col gap-6 p-10 md:p-12 border border-white/10 bg-white/[0.02] backdrop-blur-sm rounded-[2rem] hover:bg-white/[0.05] transition-[background-color,border-color] duration-500 transform-gpu"
+              className="w-[450px] md:w-[600px] flex-shrink-0 flex flex-col gap-6 p-10 md:p-12 border border-[#5F9598]/20 bg-white/[0.02] backdrop-blur-sm rounded-[2rem] hover:bg-white/[0.05] transition-[background-color,border-color] duration-500 transform-gpu"
             >
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#F3F4F4]">
                     {rec.name}
                   </h3>
-                  <p className="text-white/40 uppercase text-[10px] tracking-[0.3em] font-semibold mt-1">
+                  <p className="text-[#F3F4F4]/40 uppercase text-[10px] tracking-[0.3em] font-semibold mt-1">
                     {rec.position} @ {rec.company}
                   </p>
                 </div>
-                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center">
-                  <Linkedin className="w-4 h-4 text-white/40" />
+                <div className="w-10 h-10 rounded-full border border-[#5F9598]/20 flex items-center justify-center">
+                  <Linkedin className="w-4 h-4 text-[#F3F4F4]/40" />
                 </div>
               </div>
 
-              <p className="text-white/70 font-NeueHaas leading-relaxed text-lg md:text-xl italic font-light tracking-tight whitespace-normal line-clamp-4">
+              <p className="text-[#F3F4F4]/70 font-NeueHaas leading-relaxed text-lg md:text-xl italic font-light tracking-tight whitespace-normal line-clamp-4">
                 "{rec.recommendation}"
               </p>
 
-              <div className="mt-auto flex justify-between items-center pt-6 border-t border-white/5">
-                <span className="text-white/20 font-mono text-[10px] tracking-widest uppercase">
+              <div className="mt-auto flex justify-between items-center pt-6 border-t border-[#1D546D]/50">
+                <span className="text-[#F3F4F4]/20 font-mono text-[10px] tracking-widest uppercase">
                   Verified // {rec.date}
                 </span>
-                <span className="text-white/10 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <span className="text-[#F3F4F4]/10 text-[10px] uppercase tracking-[0.2em] font-bold">
                   0{ (index % recommendations.length) + 1 }
                 </span>
               </div>
@@ -130,15 +134,15 @@ export default function RecommendationSection() {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
+          className="pt-10 border-t border-[#1D546D]/50 flex flex-col md:flex-row justify-between items-center gap-6"
         >
-          <p className="text-white/20 text-[10px] uppercase tracking-[0.5em] font-bold">
+          <p className="text-[#F3F4F4]/20 text-[10px] uppercase tracking-[0.5em] font-bold">
             © 2026 // NIMESH KAVINDA
           </p>
           <div className="flex gap-8">
-            <span className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold">Trust</span>
-            <span className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold">Collaboration</span>
-            <span className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold">Results</span>
+            <span className="text-[#F3F4F4]/30 text-[10px] uppercase tracking-[0.2em] font-bold">Trust</span>
+            <span className="text-[#F3F4F4]/30 text-[10px] uppercase tracking-[0.2em] font-bold">Collaboration</span>
+            <span className="text-[#F3F4F4]/30 text-[10px] uppercase tracking-[0.2em] font-bold">Results</span>
           </div>
         </motion.div>
       </div>

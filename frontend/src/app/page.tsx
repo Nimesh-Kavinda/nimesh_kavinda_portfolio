@@ -52,18 +52,7 @@ export default function HomePage() {
 />
       <Heropage />
       <div className="relative">
-        {/* Pattern Background for all sections except Heropage */}
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            background: "#000000",
-            backgroundImage: `
-              radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
-            `,
-            backgroundSize: "30px 30px",
-            backgroundPosition: "0 0",
-          }}
-        />
+        
 
         <AboutSection  />
         <TechStackLoop />

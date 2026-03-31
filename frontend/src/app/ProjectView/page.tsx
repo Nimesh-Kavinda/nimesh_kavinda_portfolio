@@ -94,15 +94,15 @@ function ProjectContent() {
   }, [project.image]);
 
   return (
-    <div className="min-h-screen bg-black text-white font-NeueHaas selection:bg-blue-400/30">
+    <div className="min-h-screen bg-[#061E29] text-[#F3F4F4] font-NeueHaas selection:bg-blue-400/30">
       {/* Navigation Header */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-xl border-b border-white/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#061E29]/50 backdrop-blur-xl border-b border-[#1D546D]/50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <button
             onClick={() => router.back()}
-            className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+            className="group flex items-center gap-2 text-[#F3F4F4]/60 hover:text-[#F3F4F4] transition-colors"
           >
-            <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-all">
+            <div className="w-8 h-8 rounded-full border border-[#5F9598]/20 flex items-center justify-center group-hover:border-white/30 transition-all">
               <ArrowLeft className="w-4 h-4" />
             </div>
             <span className="text-sm font-medium tracking-wide">
@@ -115,7 +115,7 @@ function ProjectContent() {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors"
+              className="w-10 h-10 rounded-full border border-[#5F9598]/20 flex items-center justify-center hover:bg-[#1D546D]/20 transition-colors"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -123,10 +123,10 @@ function ProjectContent() {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative px-5 py-2 rounded-full bg-white/5 border border-white/10 text-white text-sm font-bold overflow-hidden flex items-center gap-2 transition-all duration-300"
+              className="group relative px-5 py-2 rounded-full bg-[#1D546D]/20 border border-[#5F9598]/20 text-[#F3F4F4] text-sm font-bold overflow-hidden flex items-center gap-2 transition-all duration-300"
             >
               <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-              <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-300">
+              <span className="relative z-10 flex items-center gap-2 group-hover:text-[#061E29] transition-colors duration-300">
                 Live Demo <ExternalLink className="w-4 h-4" />
               </span>
             </a>
@@ -145,7 +145,7 @@ function ProjectContent() {
                     {project.category}
                   </span>
                   {project.company && (
-                    <span className="flex items-center gap-1.5 text-white/40 text-xs font-medium uppercase tracking-widest">
+                    <span className="flex items-center gap-1.5 text-[#F3F4F4]/40 text-xs font-medium uppercase tracking-widest">
                       <Building2 className="w-3.5 h-3.5" />
                       {project.company}
                     </span>
@@ -163,34 +163,34 @@ function ProjectContent() {
                 {project.title.split(" ").map((word, i) => (
                   <span
                     key={i}
-                    className={i % 2 === 1 ? "text-white/30" : "text-white"}
+                    className={i % 2 === 1 ? "text-[#F3F4F4]/30" : "text-[#F3F4F4]"}
                   >
                     {word}{" "}
                   </span>
                 ))}
               </h1>
-              <p className="text-xl text-white/60 leading-relaxed max-w-xl">
+              <p className="text-xl text-[#F3F4F4]/60 leading-relaxed max-w-xl">
                 {project.description}
               </p>
             </div>
 
             <div className="flex flex-wrap gap-6 lg:justify-end">
               <div className="flex flex-col gap-1">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#F3F4F4]/30 font-bold">
                   Role
                 </span>
                 <span className="text-sm font-medium">Software Engineer</span>
               </div>
               <div className="w-px h-10 bg-white/10 hidden sm:block" />
               <div className="flex flex-col gap-1">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#F3F4F4]/30 font-bold">
                   Year
                 </span>
                 <span className="text-sm font-medium">2026</span>
               </div>
               <div className="w-px h-10 bg-white/10 hidden sm:block" />
               <div className="flex flex-col gap-1">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#F3F4F4]/30 font-bold">
                   Deliverable
                 </span>
                 <span className="text-sm font-medium">Web Application</span>
@@ -199,7 +199,7 @@ function ProjectContent() {
           </div>
 
           {/* Hero Image / Slider Section */}
-          <div className="relative aspect-video w-full rounded-[2rem] overflow-hidden border border-white/5 mb-20 group bg-white/1">
+          <div className="relative aspect-video w-full rounded-[2rem] overflow-hidden border border-[#1D546D]/50 mb-20 group bg-white/1">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentImg}
@@ -228,7 +228,7 @@ function ProjectContent() {
                       e.preventDefault();
                       prevImg();
                     }}
-                    className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all pointer-events-auto z-10"
+                    className="w-12 h-12 rounded-full bg-[#061E29]/50 backdrop-blur-md border border-[#5F9598]/20 flex items-center justify-center text-[#F3F4F4]/50 hover:text-[#F3F4F4] hover:border-white/30 transition-all pointer-events-auto z-10"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
@@ -237,7 +237,7 @@ function ProjectContent() {
                       e.preventDefault();
                       nextImg();
                     }}
-                    className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all pointer-events-auto z-10"
+                    className="w-12 h-12 rounded-full bg-[#061E29]/50 backdrop-blur-md border border-[#5F9598]/20 flex items-center justify-center text-[#F3F4F4]/50 hover:text-[#F3F4F4] hover:border-white/30 transition-all pointer-events-auto z-10"
                   >
                     <ChevronRight className="w-6 h-6" />
                   </button>
@@ -265,7 +265,7 @@ function ProjectContent() {
                   <div className="w-2 h-8 bg-blue-400 rounded-full" />
                   Overview
                 </h2>
-                <div className="space-y-6 text-lg text-white/70 leading-relaxed">
+                <div className="space-y-6 text-lg text-[#F3F4F4]/70 leading-relaxed">
                   <p>{project.longDescription}</p>
                   <p>
                     Built with scalability and performance in mind, this project
@@ -292,10 +292,10 @@ function ProjectContent() {
                         {/* Number & Title */}
                         <div className="md:col-span-4">
                           <div className="flex items-center gap-3 mb-2">
-                            <span className="text-[10px] font-mono text-white/20 group-hover:text-blue-400/50 transition-colors">
+                            <span className="text-[10px] font-mono text-[#F3F4F4]/20 group-hover:text-blue-400/50 transition-colors">
                               {String(i + 1).padStart(2, "0")}
                             </span>
-                            <h3 className="text-lg  text-white tracking-tight group-hover:translate-x-1 transition-transform duration-300">
+                            <h3 className="text-lg  text-[#F3F4F4] tracking-tight group-hover:translate-x-1 transition-transform duration-300">
                               {feature.title}
                             </h3>
                           </div>
@@ -303,15 +303,15 @@ function ProjectContent() {
 
                         {/* Descriptions */}
                         <div className="md:col-span-8 flex flex-col gap-4">
-                          <p className="text-white/50 text-sm leading-relaxed border-l border-white/5 pl-6 group-hover:border-white/20 transition-colors">
+                          <p className="text-[#F3F4F4]/50 text-sm leading-relaxed border-l border-[#1D546D]/50 pl-6 group-hover:border-white/20 transition-colors">
                             {feature.description}
                           </p>
 
                           <div className="pl-6 flex items-start gap-2">
-                            <span className="text-[10px] uppercase tracking-wider text-white/40 font-bold shrink-0 mt-0.5">
+                            <span className="text-[10px] uppercase tracking-wider text-[#F3F4F4]/40 font-bold shrink-0 mt-0.5">
                               How:
                             </span>
-                            <p className="text-[11px] text-white/30 leading-relaxed font-medium italic">
+                            <p className="text-[11px] text-[#F3F4F4]/30 leading-relaxed font-medium italic">
                               {feature.implementation}
                             </p>
                           </div>
@@ -326,7 +326,7 @@ function ProjectContent() {
             <div className="lg:col-span-4 space-y-10">
               <div className="sticky top-32">
                 <div className="mb-10">
-                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/30 mb-6 flex items-center gap-2">
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#F3F4F4]/30 mb-6 flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-blue-400" />
                     Stack
                   </h3>
@@ -334,7 +334,7 @@ function ProjectContent() {
                     {project.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="text-sm font-medium text-white/60 hover:text-white transition-colors cursor-default after:content-[','] last:after:content-[''] after:mr-1.5"
+                        className="text-sm font-medium text-[#F3F4F4]/60 hover:text-[#F3F4F4] transition-colors cursor-default after:content-[','] last:after:content-[''] after:mr-1.5"
                       >
                         {tech}
                       </span>
@@ -342,16 +342,16 @@ function ProjectContent() {
                   </div>
                 </div>
 
-                <div className="space-y-3 pt-8 border-t border-white/5">
+                <div className="space-y-3 pt-8 border-t border-[#1D546D]/50">
                   {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10 text-white  overflow-hidden transition-all duration-300"
+                      className="group relative flex items-center justify-between p-4 rounded-2xl bg-[#1D546D]/20 border border-[#5F9598]/20 text-[#F3F4F4]  overflow-hidden transition-all duration-300"
                     >
                       <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                      <span className="relative z-10 flex items-center justify-between w-full group-hover:text-black transition-colors duration-300">
+                      <span className="relative z-10 flex items-center justify-between w-full group-hover:text-[#061E29] transition-colors duration-300">
                         Live Project
                         <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       </span>
@@ -359,7 +359,7 @@ function ProjectContent() {
                   ) : (
                     <button
                       disabled
-                      className="group relative flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10  overflow-hidden cursor-not-allowed w-full text-left"
+                      className="group relative flex items-center justify-between p-4 rounded-2xl bg-[#1D546D]/20 border border-[#5F9598]/20  overflow-hidden cursor-not-allowed w-full text-left"
                     >
                       <span className="absolute inset-0 bg-red-500/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                       <span className="relative z-10 flex items-center justify-between w-full group-hover:text-red-400 transition-colors duration-300">
@@ -376,7 +376,7 @@ function ProjectContent() {
                   
                   <button
                     disabled
-                    className="group relative flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10  overflow-hidden cursor-not-allowed w-full text-left"
+                    className="group relative flex items-center justify-between p-4 rounded-2xl bg-[#1D546D]/20 border border-[#5F9598]/20  overflow-hidden cursor-not-allowed w-full text-left"
                   >
                     <span className="absolute inset-0 bg-red-500/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                     <span className="relative z-10 flex items-center justify-between w-full group-hover:text-red-400 transition-colors duration-300">
@@ -409,7 +409,7 @@ export default function ProjectView() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="min-h-screen bg-[#061E29] flex items-center justify-center">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-400"></div>
         </div>
       }

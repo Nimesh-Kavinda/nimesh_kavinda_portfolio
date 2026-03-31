@@ -35,7 +35,7 @@ const contactLinks = [
     name: "Github",
     icon: <Github className="w-5 h-5" />,
     url: "https://github.com/Nimesh-Kavinda",
-    hoverColor: "text-white",
+    hoverColor: "text-[#F3F4F4]",
   },
 ];
 
@@ -66,14 +66,14 @@ export default function FloatingContact() {
                   transition: { delay: index * 0.05 } 
                 }}
                 whileHover={{ scale: 1.05, }}
-                className="w-11 h-11 bg-white/3 border border-white/10 backdrop-blur-2xl rounded-full flex items-center justify-center text-white/50 transition-all duration-300 relative group hover:bg-white/8 hover:border-white/20 active:scale-95"
+                className="w-11 h-11 bg-white/3 border border-[#5F9598]/20 backdrop-blur-2xl rounded-full flex items-center justify-center text-[#F3F4F4]/50 transition-all duration-300 relative group hover:bg-white/8 hover:border-white/20 active:scale-95"
               >
                 <div className={`transition-colors duration-300 ${link.hoverColor}`}>
                   {link.icon}
                 </div>
                 
                 {/* Minimalist Tooltip */}
-                <span className="absolute right-14 px-3 py-1.5 bg-black/80 backdrop-blur-xl border border-white/5 rounded-md text-[9px] font-black uppercase tracking-[0.2em] text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none translate-x-2 group-hover:translate-x-0">
+                <span className="absolute right-14 px-3 py-1.5 bg-[#061E29]/80 backdrop-blur-xl border border-[#1D546D]/50 rounded-md text-[9px] font-black uppercase tracking-[0.2em] text-[#F3F4F4]/40 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none translate-x-2 group-hover:translate-x-0">
                   {link.name}
                 </span>
               </motion.a>
@@ -87,8 +87,8 @@ export default function FloatingContact() {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className={`w-14 h-14 rounded-full flex items-center justify-center text-white/80 ${
-          isOpen ? "bg-white/10 border-white/20" : "bg-white/10 border-white/10"
+        className={`w-14 h-14 rounded-full flex items-center justify-center text-[#F3F4F4]/80 ${
+          isOpen ? "bg-white/10 border-white/20" : "bg-white/10 border-[#5F9598]/20"
         } border backdrop-blur-3xl shadow-2xl transition-all duration-500 group relative overflow-hidden active:scale-90`}
       >
         <AnimatePresence mode="wait">

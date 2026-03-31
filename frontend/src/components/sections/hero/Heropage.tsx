@@ -26,7 +26,7 @@ export default function Heropage() {
           beamWidth={3}
           beamHeight={30}
           beamNumber={20}
-          lightColor="#ffffff"
+          lightColor="#F3F4F4"
           speed={2}
           noiseIntensity={1.75}
           scale={0.2}
@@ -42,7 +42,7 @@ export default function Heropage() {
         <div className="flex-1 flex flex-col justify-center items-center text-center">
           <div className="relative w-full max-w-6xl">
             {/* Background Big Text Overlay with extra blur */}
-            <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[22vw] lg:text-[24rem] font-bilmond text-white/[0.035] leading-none select-none pointer-events-none whitespace-nowrap blur-[2px]">
+            <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[22vw] lg:text-[24rem] font-bilmond text-[#F3F4F4]/[0.035] leading-none select-none pointer-events-none whitespace-nowrap blur-[2px]">
               ENGINEERING
             </h2>
 
@@ -53,7 +53,7 @@ export default function Heropage() {
               className="relative z-10"
             >
               <h2 className="text-[14vw] lg:text-[11rem] font-bilmond leading-[1.1] tracking-tighter uppercase flex flex-col items-center">
-                <span className="block italic opacity-40 mb-2 sm:mb-4 text-white tracking-[0.1em] text-[4vw] lg:text-[3rem]">
+                <span className="block italic opacity-40 mb-2 sm:mb-4 text-[#F3F4F4] tracking-[0.1em] text-[4vw] lg:text-[3rem]">
                   Creative
                 </span>
                 <div className="relative h-[1.2em] w-full flex justify-center items-center overflow-hidden">
@@ -73,7 +73,7 @@ export default function Heropage() {
                         delay: i * 4,
                         repeatDelay: (dynamicWords.length - 1) * 4,
                       }}
-                      className="absolute text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                      className="absolute text-[#F3F4F4] drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                     >
                       {word}
                     </motion.span>
@@ -97,7 +97,7 @@ export default function Heropage() {
             transition={{ delay: 1.2, duration: 1 }}
             className="mt-20 sm:mt-28 flex flex-col items-center gap-12 max-w-2xl"
           >
-            <p className="text-white/40 text-sm sm:text-lg leading-relaxed font-light tracking-wide italic max-w-lg">
+            <p className="text-[#F3F4F4]/40 text-sm sm:text-lg leading-relaxed font-light tracking-wide italic max-w-lg">
               "Turning complex structural requirements into seamless digital
               experiences through modern engineering paradigms."
             </p>
@@ -109,7 +109,7 @@ export default function Heropage() {
               {/* Main Button Circle */}
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center transition-all duration-700">
                 {/* Outer Rotating Ring */}
-                <div className="absolute inset-0 rounded-full border border-white/10 group-hover:border-white/50 group-hover:scale-110 transition-all duration-700" />
+                <div className="absolute inset-0 rounded-full border border-[#5F9598]/20 group-hover:border-[#1D546D]/500 group-hover:scale-110 transition-all duration-700" />
 
                 {/* Spinning Dash Ring (Optional visual flair) */}
                 <svg className="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite] opacity-20 group-hover:opacity-100 transition-opacity">
@@ -125,8 +125,8 @@ export default function Heropage() {
                 </svg>
 
                 {/* Inner Solid Core */}
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 z-10">
-                  <ArrowDown className="w-5 h-5 text-white/60 group-hover:text-black group-hover:scale-110 transition-all duration-500" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#1D546D]/20 border border-[#5F9598]/20 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 z-10">
+                  <ArrowDown className="w-5 h-5 text-[#F3F4F4]/60 group-hover:text-[#061E29] group-hover:scale-110 transition-all duration-500" />
                 </div>
 
                 {/* Glow Effect */}
@@ -134,10 +134,10 @@ export default function Heropage() {
               </div>
 
               <div className="flex flex-col items-center gap-1">
-                <span className="text-[10px] uppercase font-bold tracking-[0.6em] text-white/80 group-hover:text-white transition-colors">
+                <span className="text-[10px] uppercase font-bold tracking-[0.6em] text-[#F3F4F4]/80 group-hover:text-[#F3F4F4] transition-colors">
                   Start Journey
                 </span>
-                <span className="text-[8px] uppercase tracking-[0.4em] text-white/20 group-hover:text-white/40 transition-colors italic">
+                <span className="text-[8px] uppercase tracking-[0.4em] text-[#F3F4F4]/20 group-hover:text-[#F3F4F4]/40 transition-colors italic">
                   Scroll to Discover
                 </span>
               </div>
@@ -146,19 +146,19 @@ export default function Heropage() {
         </div>
 
         {/* Global Footer Stats */}
-        <div className="py-12 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+        <div className="py-12 border-t border-[#1D546D]/50 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
           {/* Top Info Bar Moved Here */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex flex-col items-center md:items-start gap-1.5"
           >
-            <span className="text-white text-[11px] font-bold uppercase tracking-[0.4em]">
+            <span className="text-[#F3F4F4] text-[11px] font-bold uppercase tracking-[0.4em]">
               Nimesh Kavinda
             </span>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-              <span className="text-white/30 text-[9px] uppercase tracking-[0.3em]">
+              <span className="text-[#F3F4F4]/30 text-[9px] uppercase tracking-[0.3em]">
                 Full-Stack Web Developer
               </span>
             </div>
@@ -170,16 +170,16 @@ export default function Heropage() {
             animate={{ opacity: 1, y: 0 }}
             className="flex flex-col items-center gap-1.5"
           >
-            <span className="text-white/20 text-[8px] uppercase tracking-[0.4em]">
+            <span className="text-[#F3F4F4]/20 text-[8px] uppercase tracking-[0.4em]">
               Availability
             </span>
-            <span className="text-white/60 text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 bg-white/[0.03] border border-white/5 rounded-full backdrop-blur-sm w-fit">
+            <span className="text-[#F3F4F4]/60 text-[9px] uppercase font-bold tracking-[0.2em] px-3 py-1 bg-white/[0.03] border border-[#1D546D]/50 rounded-full backdrop-blur-sm w-fit">
               Remote • Global
             </span>
           </motion.div>
 
           <div className="flex justify-center md:justify-end items-center">
-            <span className="text-white/10 text-[9px] tracking-[0.3em]">
+            <span className="text-[#F3F4F4]/10 text-[9px] tracking-[0.3em]">
               ©26/NIMESH
             </span>
           </div>

@@ -44,13 +44,17 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="min-h-screen text-white py-16 font-NeueHaas"
+      className="min-h-screen text-[#F3F4F4] py-16 font-NeueHaas" style={{
+          backgroundColor: "#061E29",
+          backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
+          backgroundSize: "30px 30px"
+      }}
     >
       <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-20">
         <div className="mb-10 sm:mb-14">
-          <p className="text-[11px] tracking-[0.28em] uppercase text-white/40 mb-3">Selected Work</p>
+          <p className="text-[11px] tracking-[0.28em] uppercase text-[#F3F4F4]/40 mb-3">Selected Work</p>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-            Featured <span className="text-white/35">Projects</span>
+            Featured <span className="text-[#F3F4F4]/35">Projects</span>
           </h2>
         </div>
 
@@ -61,8 +65,8 @@ export default function ProjectsSection() {
               onClick={() => setActiveFilter(category)}
               className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap border transition-colors ${
                 activeFilter === category
-                  ? "bg-white text-black border-white"
-                  : "border-white/15 text-white/65 hover:text-white hover:border-white/30"
+                  ? "bg-white text-[#061E29] border-white"
+                  : "border-white/15 text-[#F3F4F4]/65 hover:text-[#F3F4F4] hover:border-white/30"
               }`}
             >
               {category}
@@ -78,12 +82,12 @@ export default function ProjectsSection() {
             <div
               key={project.id}
               onClick={() => handleProjectClick(project.id)}
-              className="group relative bg-black border border-white/10 rounded-3xl overflow-hidden transition-all duration-300 h-125 flex flex-col will-change-transform cursor-pointer"
+              className="group relative bg-[#061E29] border border-[#5F9598]/20 rounded-3xl overflow-hidden transition-all duration-300 h-125 flex flex-col will-change-transform cursor-pointer"
             >
               {project.featured && (
                 <div className="absolute top-4 left-4 z-20 bg-white px-3 py-1 rounded-full flex items-center gap-2 border border-white/20">
-                  <Sparkles className="w-3 h-3 text-black" />
-                  <span className="text-black text-xs font-bold">Featured</span>
+                  <Sparkles className="w-3 h-3 text-[#061E29]" />
+                  <span className="text-[#061E29] text-xs font-bold">Featured</span>
                 </div>
               )}
 
@@ -105,7 +109,7 @@ export default function ProjectsSection() {
                         {project.category}
                       </span>
                       {project.company && (
-                        <div className="flex items-center gap-1.5 text-gray-400">
+                        <div className="flex items-center gap-1.5 text-[#5F9598]">
                           <Building2 className="w-3.5 h-3.5" />
                           <span className="text-[10px] uppercase tracking-wider font-bold">
                             {project.company}
@@ -122,11 +126,11 @@ export default function ProjectsSection() {
                     )}
                   </div>
 
-                  <h3 className="text-xl  text-white group-hover:text-blue-400 transition-colors duration-300 mb-3 line-clamp-1">
+                  <h3 className="text-xl  text-[#F3F4F4] group-hover:text-blue-400 transition-colors duration-300 mb-3 line-clamp-1">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4 font-NeueHaas line-clamp-3">
+                  <p className="text-[#5F9598] text-sm leading-relaxed mb-4 font-NeueHaas line-clamp-3">
                     {project.description}
                   </p>
 
@@ -134,7 +138,7 @@ export default function ProjectsSection() {
                     {project.technologies.slice(0, 4).map((tech, i) => (
                       <span
                         key={i}
-                        className="px-2 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-xs text-gray-400 group-hover:bg-white/10 group-hover:border-blue-400/30 transition-all duration-300"
+                        className="px-2 py-1 bg-[#1D546D]/20 backdrop-blur-sm border border-[#5F9598]/20 rounded-lg text-xs text-[#5F9598] group-hover:bg-white/10 group-hover:border-blue-400/30 transition-all duration-300"
                       >
                         {tech}
                       </span>
@@ -169,7 +173,7 @@ export default function ProjectsSection() {
               onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                currentPage === 1 ? "text-white/20 cursor-not-allowed" : "text-white/60 hover:text-white"
+                currentPage === 1 ? "text-[#F3F4F4]/20 cursor-not-allowed" : "text-[#F3F4F4]/60 hover:text-[#F3F4F4]"
               }`}
             >
               <ArrowUpRight className="w-4 h-4 rotate-225" />
@@ -184,7 +188,7 @@ export default function ProjectsSection() {
                   className={`relative w-8 h-8 flex items-center justify-center text-xs font-bold transition-all ${
                     currentPage === page 
                       ? "text-blue-400" 
-                      : "text-white/30 hover:text-white"
+                      : "text-[#F3F4F4]/30 hover:text-[#F3F4F4]"
                   }`}
                 >
                   {currentPage === page && (
@@ -203,7 +207,7 @@ export default function ProjectsSection() {
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                currentPage === totalPages ? "text-white/20 cursor-not-allowed" : "text-white/60 hover:text-white"
+                currentPage === totalPages ? "text-[#F3F4F4]/20 cursor-not-allowed" : "text-[#F3F4F4]/60 hover:text-[#F3F4F4]"
               }`}
             >
               Next

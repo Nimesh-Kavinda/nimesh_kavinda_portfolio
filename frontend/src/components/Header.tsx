@@ -74,10 +74,10 @@ export default function Header() {
                 px-6 py-2.5 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold transition-all duration-500
                 ${
                   item.isContactButton
-                    ? "bg-white text-black hover:bg-white/90 ml-2"
+                    ? "bg-white text-[#061E29] hover:bg-white/90 ml-2"
                     : (item.isSection ? activeSection === item.path : pathname === item.path)
-                    ? "text-white bg-white/20"
-                    : "text-white/60 hover:text-white"
+                    ? "text-[#F3F4F4] bg-white/20"
+                    : "text-[#F3F4F4]/60 hover:text-[#F3F4F4]"
                 }
               `}
             >
@@ -89,7 +89,7 @@ export default function Header() {
         {/* Mobile Menu Button - Minimalist Style */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden ml-auto p-4 text-white bg-white/10 backdrop-blur-xl border border-white/10 rounded-full hover:bg-white/20 transition-all"
+          className="lg:hidden ml-auto p-4 text-[#F3F4F4] bg-white/10 backdrop-blur-xl border border-[#5F9598]/20 rounded-full hover:bg-white/20 transition-all"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -103,11 +103,11 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/98 backdrop-blur-3xl z-40 flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-[#061E29]/98 backdrop-blur-3xl z-40 flex flex-col items-center justify-center"
           >
             <button 
               onClick={() => setIsMenuOpen(false)}
-              className="absolute top-10 right-10 p-6 text-white/50 hover:text-white transition-colors"
+              className="absolute top-10 right-10 p-6 text-[#F3F4F4]/50 hover:text-[#F3F4F4] transition-colors"
             >
               <X className="w-8 h-8 font-light" />
             </button>
@@ -126,7 +126,7 @@ export default function Header() {
                       handleNavClick(e, item);
                       setIsMenuOpen(false);
                     }}
-                    className="text-4xl md:text-7xl font-bold uppercase tracking-tighter hover:text-white transition-colors block text-white/30"
+                    className="text-4xl md:text-7xl font-bold uppercase tracking-tighter hover:text-[#F3F4F4] transition-colors block text-[#F3F4F4]/30"
                   >
                     {item.name}
                   </Link>
@@ -134,7 +134,7 @@ export default function Header() {
               ))}
             </ul>
 
-            <div className="absolute bottom-16 text-[10px] uppercase tracking-[0.5em] text-white/10 font-bold">
+            <div className="absolute bottom-16 text-[10px] uppercase tracking-[0.5em] text-[#F3F4F4]/10 font-bold">
               © 2026 // NIMESH KAVINDA
             </div>
           </motion.div>

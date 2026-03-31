@@ -100,14 +100,18 @@ export default function CertificateSection() {
   return (
     <section
       id="certificates"
-      className="min-h-screen py-24 font-bilmond text-white overflow-hidden"
+      className="min-h-screen py-24 font-bilmond text-[#F3F4F4] overflow-hidden" style={{
+        backgroundColor: "#061E29",
+        backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
+        backgroundSize: "30px 30px"
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Header */}
         <div className="mb-24 text-right">
           <h2 className="text-5xl md:text-7xl lg:text-9xl font-bold uppercase tracking-tighter leading-none">
             Learning <br />
-            <span className="text-white opacity-20">Journey</span>
+            <span className="text-[#F3F4F4] opacity-20">Journey</span>
           </h2>
         </div>
 
@@ -116,16 +120,16 @@ export default function CertificateSection() {
           {educationData.map((edu, index) => (
             <div 
               key={edu.id} 
-              className="group relative border-t border-white/10 py-12 md:py-16 transition-all duration-700 hover:bg-white/2"
+              className="group relative bg-[#061E29] border-t border-[#5F9598]/20 py-12 px-6 md:px-8 md:py-16 transition-all duration-700 hover:bg-[#1D546D]/20 z-10"
             >
               <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_auto] gap-8 items-start">
                 {/* Year */}
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2 text-white/50  transition-colors">
+                  <div className="flex items-center gap-2 text-[#F3F4F4]/50  transition-colors">
                     <Calendar className="w-4 h-4" />
                     <span className="text-lg font-bold tracking-widest">{edu.year}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-white/30 text-[10px] uppercase tracking-[0.2em]">
+                  <div className="flex items-center gap-2 text-[#F3F4F4]/30 text-[10px] uppercase tracking-[0.2em]">
                     <MapPin className="w-3.5 h-3.5" />
                     {edu.location}
                   </div>
@@ -137,29 +141,29 @@ export default function CertificateSection() {
                     <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 group-hover:translate-x-2 transition-transform duration-500">
                       {edu.title}
                     </h3>
-                    <p className="text-xl md:text-2xl text-white/50 font-medium">
+                    <p className="text-xl md:text-2xl text-[#F3F4F4]/50 font-medium">
                       {edu.institution}
                     </p>
                   </div>
-                  <p className="text-gray-400 text-lg leading-relaxed max-w-2xl font-sans opacity-60 group-hover:opacity-100 transition-all duration-500">
+                  <p className="text-[#5F9598] text-lg leading-relaxed max-w-2xl font-sans opacity-60 group-hover:opacity-100 transition-all duration-500">
                     {edu.description}
                   </p>
 
                   {(edu as any).semesters && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                       {(edu as any).semesters.map((sem: any, sIdx: number) => (
-                        <div key={sIdx} className="bg-white/3 border border-white/5 rounded-2xl p-6 hover:bg-white/5 transition-colors relative overflow-hidden group/sem">
-                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/2 rounded-full blur-3xl -mr-10 -mt-10 group-hover/sem:bg-white/5 transition-colors"></div>
+                        <div key={sIdx} className="bg-white/3 border border-[#1D546D]/50 rounded-2xl p-6 hover:bg-[#1D546D]/20 transition-colors relative overflow-hidden group/sem">
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/2 rounded-full blur-3xl -mr-10 -mt-10 group-hover/sem:bg-[#1D546D]/20 transition-colors"></div>
                           <div className="flex justify-between items-center mb-4 relative z-10">
-                            <h4 className="text-white font-bold text-xl">Semester {sem.sem}</h4>
-                            <div className="bg-white/10 px-3 py-1 rounded-full border border-white/10">
-                              <span className="text-white/80 font-mono text-sm font-semibold tracking-wider">GPA: {sem.gpa}</span>
+                            <h4 className="text-[#F3F4F4] font-bold text-xl">Semester {sem.sem}</h4>
+                            <div className="bg-white/10 px-3 py-1 rounded-full border border-[#5F9598]/20">
+                              <span className="text-[#F3F4F4]/80 font-mono text-sm font-semibold tracking-wider">GPA: {sem.gpa}</span>
                             </div>
                           </div>
                           <ul className="space-y-2 relative z-10">
                             {sem.subjects.map((sub: string, i: number) => (
-                              <li key={i} className="text-white/60 text-sm flex items-start gap-2">
-                                <span className="text-white/30 text-[10px] mt-1">▶</span>
+                              <li key={i} className="text-[#F3F4F4]/60 text-sm flex items-start gap-2">
+                                <span className="text-[#F3F4F4]/30 text-[10px] mt-1">▶</span>
                                 <span className="leading-snug">{sub}</span>
                               </li>
                             ))}
@@ -171,14 +175,14 @@ export default function CertificateSection() {
                 </div>
 
                 {/* Minimal Icon */}
-                <div className="hidden md:flex items-center justify-center p-6 border border-white/5 rounded-full opacity-20 group-hover:opacity-100 group-hover:rotate-12 transition-all duration-700">
+                <div className="hidden md:flex items-center justify-center p-6 border border-[#1D546D]/50 rounded-full opacity-20 group-hover:opacity-100 group-hover:rotate-12 transition-all duration-700">
                   {edu.icon}
                 </div>
               </div>
             </div>
           ))}
           {/* Bottom Border */}
-          <div className="border-t border-white/10 w-full"></div>
+          <div className="border-t border-[#5F9598]/20 w-full"></div>
         </div>
       </div>
     </section>

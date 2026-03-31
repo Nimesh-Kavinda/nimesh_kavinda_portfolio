@@ -48,7 +48,11 @@ const imageLogos = [
 
 export default function TechStackLoop() {
   return (
-    <div className=" py-32  text-white ">
+    <div className=" py-32  text-[#F3F4F4] " style={{
+        backgroundColor: "#061E29",
+        backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
+        backgroundSize: "30px 30px"
+      }}>
       {/* Basic horizontal loop */}
       <LogoLoop
         logos={techLogos}
@@ -59,7 +63,7 @@ export default function TechStackLoop() {
         pauseOnHover={true}
         scaleOnHover
         fadeOut
-        fadeOutColor="#000000"
+        fadeOutColor="#061E29"
         ariaLabel="Technology partners"
       />
     </div>

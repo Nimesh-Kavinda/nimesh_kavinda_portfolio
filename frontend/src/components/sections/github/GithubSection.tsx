@@ -26,8 +26,12 @@ export default function GithubSection() {
 
   if (loading) {
     return (
-      <section className="py-24 text-white font-NeueHaas border-t border-white/5 relative bg-black/20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 text-center text-white/50 animate-pulse">
+      <section className="py-24 text-[#F3F4F4] font-NeueHaas  relative bg-[#061E29]/20" style={{
+          backgroundColor: "#061E29",
+          backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
+          backgroundSize: "30px 30px"
+      }}>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 text-center text-[#F3F4F4]/50 animate-pulse">
             Loading GitHub Journey...
         </div>
       </section>
@@ -37,23 +41,27 @@ export default function GithubSection() {
   if (!data || !data.user) return null;
 
   return (
-    <section className="py-24 text-white font-NeueHaas border-t border-white/5 relative bg-black/20">
+    <section className="py-24 text-[#F3F4F4] font-NeueHaas  relative bg-[#061E29]/20" style={{
+          backgroundColor: "#061E29",
+          backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
+          backgroundSize: "30px 30px"
+      }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         {/* Header */}
         <div className="mb-16">
-          <p className="text-[11px] tracking-[0.28em] uppercase text-white/40 mb-3 flex items-center gap-2">
+          <p className="text-[11px] tracking-[0.28em] uppercase text-[#F3F4F4]/40 mb-3 flex items-center gap-2">
             <Github className="w-4 h-4" /> Version Control
           </p>
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
-            GitHub <span className="text-white/35">Journey</span>
+            GitHub <span className="text-[#F3F4F4]/35">Journey</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12">
           {/* User Profile Info */}
           <div className="flex flex-col gap-6">
-            <div className="bg-white/3 border border-white/10 rounded-2xl p-8 hover:bg-white/5 transition-all duration-500 overflow-hidden relative group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/2 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-white/5 transition-colors"></div>
+            <div className="bg-white/3 border border-[#5F9598]/20 rounded-2xl p-8 hover:bg-[#1D546D]/20 transition-all duration-500 overflow-hidden relative group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/2 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-[#1D546D]/20 transition-colors"></div>
               
               <div className="flex items-center gap-6 mb-8 relative z-10">
                 <img 
@@ -63,25 +71,25 @@ export default function GithubSection() {
                 />
                 <div>
                   <h3 className="text-2xl font-bold">{data.user.name}</h3>
-                  <a href={data.user.html_url} target="_blank" rel="noreferrer" className="text-white/50 hover:text-white transition-colors flex items-center gap-1 mt-1 text-sm">
+                  <a href={data.user.html_url} target="_blank" rel="noreferrer" className="text-[#F3F4F4]/50 hover:text-[#F3F4F4] transition-colors flex items-center gap-1 mt-1 text-sm">
                     @{data.user.login} <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
               </div>
 
-              <p className="text-white/60 mb-8 leading-relaxed relative z-10 text-sm">
+              <p className="text-[#F3F4F4]/60 mb-8 leading-relaxed relative z-10 text-sm">
                 {data.user.bio}
               </p>
 
               <div className="grid grid-cols-2 gap-4 relative z-10">
-                <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-                  <div className="flex items-center gap-2 text-white/40 mb-2 text-xs uppercase tracking-wider">
+                <div className="bg-[#1D546D]/20 rounded-xl p-4 border border-[#1D546D]/50">
+                  <div className="flex items-center gap-2 text-[#F3F4F4]/40 mb-2 text-xs uppercase tracking-wider">
                     <BookOpen className="w-3.5 h-3.5" /> Repos
                   </div>
                   <div className="text-2xl font-mono font-bold">{data.user.public_repos}</div>
                 </div>
-                <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-                  <div className="flex items-center gap-2 text-white/40 mb-2 text-xs uppercase tracking-wider">
+                <div className="bg-[#1D546D]/20 rounded-xl p-4 border border-[#1D546D]/50">
+                  <div className="flex items-center gap-2 text-[#F3F4F4]/40 mb-2 text-xs uppercase tracking-wider">
                     <Users className="w-3.5 h-3.5" /> Followers
                   </div>
                   <div className="text-2xl font-mono font-bold">{data.user.followers}</div>
@@ -97,9 +105,9 @@ export default function GithubSection() {
           <div>
             <div className="flex items-center justify-between mb-8">
               <h3 className="text-xl font-bold flex items-center gap-2">
-                <Activity className="w-5 h-5 text-white/50" /> Highlighted Repositories
+                <Activity className="w-5 h-5 text-[#F3F4F4]/50" /> Highlighted Repositories
               </h3>
-              <p className="text-xs text-white/40 uppercase tracking-widest hidden sm:block">With Previews</p>
+              <p className="text-xs text-[#F3F4F4]/40 uppercase tracking-widest hidden sm:block">With Previews</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -109,9 +117,9 @@ export default function GithubSection() {
                   href={repo.html_url} 
                   target="_blank" 
                   rel="noreferrer"
-                  className="group block bg-white/2 border border-white/5 rounded-xl overflow-hidden hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
+                  className="group block bg-white/2 border border-[#1D546D]/50 rounded-xl overflow-hidden hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
                 >
-                  <div className="h-40 relative w-full border-b border-white/5 overflow-hidden bg-black/40">
+                  <div className="h-40 relative w-full border-b border-[#1D546D]/50 overflow-hidden bg-[#061E29]/40">
                     <img 
                       src={repo.image} 
                       alt={repo.name}
@@ -122,15 +130,15 @@ export default function GithubSection() {
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-bold text-lg leading-tight truncate pr-4 group-hover:text-amber-400 transition-colors">{repo.name}</h4>
                       {repo.language && (
-                        <span className="text-[10px] text-white/40 border border-white/10 px-2 py-0.5 rounded-full whitespace-nowrap">
+                        <span className="text-[10px] text-[#F3F4F4]/40 border border-[#5F9598]/20 px-2 py-0.5 rounded-full whitespace-nowrap">
                           {repo.language}
                         </span>
                       )}
                     </div>
-                    <p className="text-xs text-white/50 line-clamp-2 mb-4 h-8 group-hover:text-white/70 transition-colors">
+                    <p className="text-xs text-[#F3F4F4]/50 line-clamp-2 mb-4 h-8 group-hover:text-[#F3F4F4]/70 transition-colors">
                       {repo.description || 'No description provided.'}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-white/30">
+                    <div className="flex items-center justify-between text-xs text-[#F3F4F4]/30">
                       <span className="flex items-center gap-1 group-hover:text-yellow-400 transition-colors">
                         <Star className="w-3.5 h-3.5" /> {repo.stargazers_count}
                       </span>
@@ -142,13 +150,13 @@ export default function GithubSection() {
             </div>
             
             {data.repos.length === 0 && (
-                <div className="text-white/30 py-12 text-center border border-white/5 border-dashed rounded-xl">
+                <div className="text-[#F3F4F4]/30 py-12 text-center border border-[#1D546D]/50 border-dashed rounded-xl">
                     No previewable repositories found automatically. Check out my full GitHub!
                 </div>
             )}
             
             <div className="mt-8 text-center sm:text-left">
-                <a href={data.user.html_url + "?tab=repositories"} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium hover:text-white text-white/60 transition-colors border-b border-white/10 hover:border-white pb-1">
+                <a href={data.user.html_url + "?tab=repositories"} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium hover:text-[#F3F4F4] text-[#F3F4F4]/60 transition-colors border-b border-[#5F9598]/20 hover:border-white pb-1">
                     View all repositories <ExternalLink className="w-3 h-3" />
                 </a>
             </div>

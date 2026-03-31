@@ -83,18 +83,18 @@ export default function ResumePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-50 text-black p-4 md:p-12 font-sans selection:bg-gray-200">
+    <div className="min-h-screen bg-neutral-50 text-[#061E29] p-4 md:p-12 font-sans selection:bg-gray-200">
       {/* Print Control - Hidden on Print */}
       <div className="max-w-4xl mx-auto mb-12 flex justify-between items-center print:hidden no-print">
         <button
           onClick={() => window.history.back()}
-          className="text-sm font-medium text-gray-500 hover:text-black transition-colors flex items-center gap-2"
+          className="text-sm font-medium text-gray-500 hover:text-[#061E29] transition-colors flex items-center gap-2"
         >
           ← Back to Portfolio
         </button>
         <button
           onClick={handlePrint}
-          className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full text-sm font-bold hover:bg-gray-800 transition-all shadow-xl hover:scale-105 active:scale-95"
+          className="flex items-center gap-2 px-6 py-3 bg-[#061E29] text-[#F3F4F4] rounded-full text-sm font-bold hover:bg-gray-800 transition-all shadow-xl hover:scale-105 active:scale-95"
         >
           <Printer size={18} />
           Print / Save as PDF
@@ -139,7 +139,7 @@ export default function ResumePage() {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
             <div className="flex-1 space-y-8">
               <div className="space-y-4">
-                <h1 className="text-7xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-black">
+                <h1 className="text-7xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-[#061E29]">
                   Nimesh<br />Kavinda
                 </h1>
                 <p className="text-2xl md:text-3xl font-light text-gray-500 tracking-[0.2em] uppercase">
@@ -149,30 +149,30 @@ export default function ResumePage() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
                 <div className="flex items-center gap-3 group">
-                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Mail size={14} /></div>
-                   <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider md:tracking-widest text-gray-600 hover:text-black transition-colors break-all">nimeshkavindakarunasinghe@gmail.com</a>
+                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#5F9598] group-hover:bg-[#061E29] group-hover:text-[#F3F4F4] transition-all duration-500"><Mail size={14} /></div>
+                   <a href="mailto:nimeshkavindakarunasinghe@gmail.com" className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider md:tracking-widest text-gray-600 hover:text-[#061E29] transition-colors break-all">nimeshkavindakarunasinghe@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-3 group">
-                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Phone size={14} /></div>
-                   <a href="tel:0778525115" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">0778525115</a>
+                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#5F9598] group-hover:bg-[#061E29] group-hover:text-[#F3F4F4] transition-all duration-500"><Phone size={14} /></div>
+                   <a href="tel:0778525115" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-[#061E29] transition-colors">0778525115</a>
                 </div>
                 <div className="flex items-center gap-3 group">
-                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><MapPin size={14} /></div>
+                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#5F9598] group-hover:bg-[#061E29] group-hover:text-[#F3F4F4] transition-all duration-500"><MapPin size={14} /></div>
                    <span className="text-sm font-bold uppercase tracking-widest text-gray-600">Kegalle, Sri Lanka</span>
                 </div>
                 <div className="flex items-center gap-3 group">
-                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white transition-all duration-500"><Globe size={14} /></div>
-                   <a href="https://github.com/Nimesh-Kavinda" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">github.com/Nimesh-Kavinda</a>
+                   <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-[#5F9598] group-hover:bg-[#061E29] group-hover:text-[#F3F4F4] transition-all duration-500"><Globe size={14} /></div>
+                   <a href="https://github.com/Nimesh-Kavinda" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest text-gray-600 hover:text-[#061E29] transition-colors">github.com/Nimesh-Kavinda</a>
                 </div>
               </div>
 
               <div className="flex items-center gap-6 pt-4 border-t border-gray-100 max-w-xs">
-                 <a href="https://github.com/Nimesh-Kavinda" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-black transition-colors flex items-center gap-2 group">
+                 <a href="https://github.com/Nimesh-Kavinda" target="_blank" rel="noopener noreferrer" className="text-[#5F9598] hover:text-[#061E29] transition-colors flex items-center gap-2 group">
                     <Github size={20} className="group-hover:scale-110 transition-transform" />
                     <span className="text-[10px] font-black uppercase tracking-widest">Github</span>
                  </a>
                  <div className="w-px h-4 bg-gray-200" />
-                 <a href="http://www.linkedin.com/in/nimesh-kavinda-b363012b7" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-black transition-colors flex items-center gap-2 group">
+                 <a href="http://www.linkedin.com/in/nimesh-kavinda-b363012b7" target="_blank" rel="noopener noreferrer" className="text-[#5F9598] hover:text-[#061E29] transition-colors flex items-center gap-2 group">
                     <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
                     <span className="text-[10px] font-black uppercase tracking-widest">LinkedIn</span>
                  </a>
@@ -181,7 +181,7 @@ export default function ResumePage() {
 
             {/* Profile Image - Minimalist High Contrast */}
             <div className="relative group self-center lg:self-start">
-              <div className="absolute inset-0 bg-black translate-x-3 translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 -z-10" />
+              <div className="absolute inset-0 bg-[#061E29] translate-x-3 translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 -z-10" />
               <div className="relative w-48 h-64 md:w-56 md:h-72 border-2 border-black overflow-hidden bg-gray-100">
                 <Image
                   src="/images/about.jpg" 
@@ -197,7 +197,7 @@ export default function ResumePage() {
 
         {/* Summary */}
         <section className="mb-14">
-          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-black/30 mb-6 flex items-center gap-4">
+          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-[#061E29]/30 mb-6 flex items-center gap-4">
             Professional Summary <div className="h-px bg-gray-100 flex-1" />
           </h2>
           <p className="text-xl leading-relaxed text-gray-800 font-medium italic border-l-4 border-black pl-6">
@@ -207,7 +207,7 @@ export default function ResumePage() {
 
         {/* Experience */}
         <section className="mb-14">
-          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-black/30 mb-8 flex items-center gap-4">
+          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-[#061E29]/30 mb-8 flex items-center gap-4">
             Work Experience <div className="h-px bg-gray-100 flex-1" />
           </h2>
           <div className="space-y-12">
@@ -215,18 +215,18 @@ export default function ResumePage() {
               <div key={exp.id} className="relative group">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold tracking-tight text-black">{exp.title}</h3>
+                    <h3 className="text-2xl font-bold tracking-tight text-[#061E29]">{exp.title}</h3>
                     <p className="text-lg text-gray-500 font-semibold">{exp.company}</p>
                   </div>
                   <div className="md:text-right mt-2 md:mt-0">
                     <p className="text-sm font-bold bg-neutral-100 px-3 py-1 rounded-md inline-block mb-1">{exp.period}</p>
-                    <p className="text-xs text-gray-400 font-bold uppercase tracking-widest">{exp.location}</p>
+                    <p className="text-xs text-[#5F9598] font-bold uppercase tracking-widest">{exp.location}</p>
                   </div>
                 </div>
                 <ul className="space-y-3 text-gray-700 text-[15px] leading-snug">
                   {exp.achievements.map((achievement, i) => (
                     <li key={i} className="flex gap-3">
-                      <span className="text-black font-bold mt-1.5">•</span>
+                      <span className="text-[#061E29] font-bold mt-1.5">•</span>
                       <span>{achievement}</span>
                     </li>
                   ))}
@@ -238,13 +238,13 @@ export default function ResumePage() {
 
         {/* Technical Expertise */}
         <section className="mb-14">
-          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-black/30 mb-8 flex items-center gap-4">
+          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-[#061E29]/30 mb-8 flex items-center gap-4">
             Technical Expertise <div className="h-px bg-gray-100 flex-1" />
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
             {skillsData.map((skillGroup) => (
               <div key={skillGroup.id} className="break-inside-avoid">
-                <h3 className="text-xs uppercase font-black tracking-widest text-black mb-3">
+                <h3 className="text-xs uppercase font-black tracking-widest text-[#061E29] mb-3">
                   {skillGroup.category.split(" // ")[0]}
                 </h3>
                 <div className="flex flex-wrap gap-x-4 gap-y-2">
@@ -261,7 +261,7 @@ export default function ResumePage() {
 
         {/* Education */}
         <section className="mb-14">
-          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-black/30 mb-8 flex items-center gap-4">
+          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-[#061E29]/30 mb-8 flex items-center gap-4">
             Education <div className="h-px bg-gray-100 flex-1" />
           </h2>
           <div className="space-y-8">
@@ -276,7 +276,7 @@ export default function ResumePage() {
                       {edu.semesters.map((sem, sIdx) => (
                         <div key={sIdx} className="bg-white ring-1 ring-gray-100 border border-gray-100/50 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] print:shadow-none print:border-gray-200">
                           <div className="flex justify-between items-center mb-3">
-                            <h4 className="font-bold text-black text-sm">Semester {sem.sem}</h4>
+                            <h4 className="font-bold text-[#061E29] text-sm">Semester {sem.sem}</h4>
                             <span className="text-xs font-bold bg-neutral-100 px-2 py-0.5 rounded text-gray-600 border border-gray-200">GPA: {sem.gpa}</span>
                           </div>
                           <ul className="space-y-1">
@@ -293,7 +293,7 @@ export default function ResumePage() {
                 </div>
                 <div className="md:text-right">
                   <span className="text-sm font-bold bg-neutral-100 px-3 py-1 rounded-md">{edu.year}</span>
-                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-2">{edu.location}</p>
+                  <p className="text-xs text-[#5F9598] font-bold uppercase tracking-widest mt-2">{edu.location}</p>
                 </div>
               </div>
             ))}
@@ -302,47 +302,47 @@ export default function ResumePage() {
 
         {/* Projects (Detailed) */}
         <section className="mb-10">
-          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-black/30 mb-8 flex items-center gap-4">
+          <h2 className="text-[11px] uppercase tracking-[0.4em] font-black text-[#061E29]/30 mb-8 flex items-center gap-4">
             Signature Projects <div className="h-px bg-gray-100 flex-1" />
           </h2>
           <div className="grid grid-cols-1 gap-10">
             <div>
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-bold text-lg">TabTask - Enterprise SaaS</h3>
-                <span className="text-[10px] uppercase font-bold text-gray-400">Collaborative Task Management</span>
+                <span className="text-[10px] uppercase font-bold text-[#5F9598]">Collaborative Task Management</span>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed mb-3">
                 Engineered a comprehensive task management platform with complex Role-Based Access Control (RBAC), real-time sync via Socket.IO, and scalable PostgreSQL database. Features Kanban boards and advanced team analytics.
               </p>
-              <p className="text-[10px] font-bold text-gray-400">Node.js · React · Socket.io · PostgreSQL · Redis · Supabase</p>
+              <p className="text-[10px] font-bold text-[#5F9598]">Node.js · React · Socket.io · PostgreSQL · Redis · Supabase</p>
             </div>
             
             <div>
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-bold text-lg">Envio - Content Automation</h3>
-                <span className="text-[10px] uppercase font-bold text-gray-400">Chrome Extension</span>
+                <span className="text-[10px] uppercase font-bold text-[#5F9598]">Chrome Extension</span>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed mb-3">
                 Production-ready automation tool for bulk video generation, trusted by over 500 active users. Built with Manifest V3 and React 19, focusing on UX and performance scaling.
               </p>
-              <p className="text-[10px] font-bold text-gray-400">React · Vite · Chrome MV3 · Firebase · Framer Motion</p>
+              <p className="text-[10px] font-bold text-[#5F9598]">React · Vite · Chrome MV3 · Firebase · Framer Motion</p>
             </div>
 
             <div>
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-bold text-lg">Reframer - AI Video Tool</h3>
-                <span className="text-[10px] uppercase font-bold text-gray-400">Media SaaS</span>
+                <span className="text-[10px] uppercase font-bold text-[#5F9598]">Media SaaS</span>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed mb-3">
                 AI-powered video reframing service utilizing a cloud-based AI processing API with token-based monetization and real-time processing dashboard.
               </p>
-              <p className="text-[10px] font-bold text-gray-400">Express · AI Integration · Firebase · WebSocket</p>
+              <p className="text-[10px] font-bold text-[#5F9598]">Express · AI Integration · Firebase · WebSocket</p>
             </div>
           </div>
         </section>
 
         {/* Footer Info */}
-        <footer className="mt-20 pt-8 border-t border-gray-100 flex justify-between items-center text-[9px] text-gray-400 uppercase tracking-widest font-bold">
+        <footer className="mt-20 pt-8 border-t border-gray-100 flex justify-between items-center text-[9px] text-[#5F9598] uppercase tracking-widest font-bold">
           <span>Portfolio-Generated Document</span>
           <span>©2026 Nimesh Kavinda</span>
           <span>Full-Stack Web Developer</span>

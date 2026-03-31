@@ -45,7 +45,7 @@ export default function TextScroll() {
   ];
 
   return (
-    <section ref={containerRef} className="relative py-4 bg-black  overflow-hidden select-none font-bilmond">
+    <section ref={containerRef} className="relative py-4 bg-[#061E29]  overflow-hidden select-none font-bilmond">
       <style>{`
         .ticker-line {
           height: auto;
