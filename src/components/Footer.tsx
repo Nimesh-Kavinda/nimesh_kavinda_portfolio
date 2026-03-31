@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#061E29] text-[#F3F4F4] py-24 px-6 md:px-12 border-t border-[#1D546D]/50 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto relative z-10">
+      <div className="max-w-350 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start pb-24 md:pb-40">
           {/* Main Title Section */}
           <motion.div
@@ -40,7 +40,7 @@ export default function Footer() {
             >
               <div className="relative overflow-hidden pb-1">
                 <span>nimeshkavindakarunasinghe@gmail.com</span>
-                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
+                <div className="absolute bottom-0 left-0 w-full h-px bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
               </div>
               <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-[#1D546D] flex items-center justify-center group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-500">
                 <ArrowUp className="w-5 h-5 md:w-6 md:h-6 rotate-45 group-hover:rotate-0 transition-transform duration-500" />
@@ -69,7 +69,7 @@ export default function Footer() {
                   >
                     <span className="relative overflow-hidden pb-1">
                       {social.name}
-                      <span className="absolute bottom-0 left-0 w-full h-[1px] bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
+                      <span className="absolute bottom-0 left-0 w-full h-px bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
                     </span>
                     <ArrowUp className="w-4 h-4 rotate-45 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                   </a>
