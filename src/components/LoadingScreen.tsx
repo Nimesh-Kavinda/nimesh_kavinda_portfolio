@@ -21,7 +21,7 @@ export default function LoadingScreen() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full fixed inset-0 z-[100] flex flex-col justify-center items-center bg-black overflow-hidden backdrop-blur-xl">
+    <div className="min-h-screen w-full fixed inset-0 z-100 flex flex-col justify-center items-center bg-black overflow-hidden backdrop-blur-xl">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px]" />
       
@@ -61,7 +61,7 @@ export default function LoadingScreen() {
         </motion.div>
 
         {/* Progress Bar Container */}
-        <div className="w-64 md:w-80 h-[2px] bg-white/10 rounded-full overflow-hidden relative">
+        <div className="w-64 md:w-80 h-0.5 bg-white/10 rounded-full overflow-hidden relative">
           <motion.div 
             className="absolute top-0 left-0 h-full bg-cyan-400"
             initial={{ width: "0%" }}

@@ -75,9 +75,9 @@ const AboutSection = () => {
             className="flex flex-col gap-10"
           >
             <div className="space-y-8">
-              <h3 className="text-4xl md:text-6xl font-bold uppercase  leading-[0.9]">
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold uppercase leading-[1.1] sm:leading-[0.9]">
                 <span className='text-[#F3F4F4]'>Nimesh Kavinda</span> <br />
-                <span className='text-[#F3F4F4]/40 inline-block h-[1em] overflow-visible relative min-w-[300px]'>
+                <span className='text-[#F3F4F4]/40 inline-block h-[1.2em] sm:h-[1em] overflow-visible relative w-full mt-1 sm:mt-0'>
                   <AnimatePresence mode="popLayout">
                     <motion.span
                       key={currentRoleIndex}
@@ -85,7 +85,7 @@ const AboutSection = () => {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -20, opacity: 0 }}
                       transition={{ duration: 0.5 }}
-                      className="absolute left-0 top-0 whitespace-nowrap"
+                      className="absolute left-0 top-0 whitespace-nowrap text-[6.5vw] sm:text-4xl md:text-6xl"
                     >
                       {roles[currentRoleIndex]}
                     </motion.span>
