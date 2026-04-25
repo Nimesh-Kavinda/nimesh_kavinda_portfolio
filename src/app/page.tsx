@@ -31,16 +31,12 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); 
-    
-    return () => clearTimeout(timer);
+    // Initial loading is now disabled to prevent blocking on hydration failure
   }, [router, setLoading]);
 
-  if (loading) {
-    return <LoadingScreen />;
-  }
+  // if (loading) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <>

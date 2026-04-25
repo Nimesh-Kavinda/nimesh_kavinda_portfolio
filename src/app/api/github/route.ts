@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic'; // Prevent static generation failures if API rate limits hit
+
 export async function GET() {
   try {
     const userRes = await fetch('https://api.github.com/users/Nimesh-Kavinda', {

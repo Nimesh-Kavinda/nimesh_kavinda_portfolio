@@ -82,7 +82,7 @@ export default function ProjectsSection() {
             <div
               key={project.id}
               onClick={() => handleProjectClick(project.id)}
-              className="group relative bg-[#061E29] border border-[#5F9598]/20 rounded-3xl overflow-hidden transition-all duration-300 h-125 flex flex-col will-change-transform cursor-pointer"
+              className="group relative bg-[#061E29] border border-[#5F9598]/20 rounded-3xl overflow-hidden transition-all duration-300 h-full flex flex-col will-change-transform cursor-pointer"
             >
               {project.featured && (
                 <div className="absolute top-4 left-4 z-20 bg-white px-3 py-1 rounded-full flex items-center gap-2 border border-white/20">

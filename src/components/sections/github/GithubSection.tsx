@@ -24,21 +24,19 @@ export default function GithubSection() {
     fetchData();
   }, []);
 
-  if (loading) {
+  if (!data || !data.user) {
     return (
-      <section className="py-24 text-[#F3F4F4] font-NeueHaas  relative bg-[#061E29]/20" style={{
+      <section className="py-24 text-[#F3F4F4] font-NeueHaas relative bg-[#061E29]/20" style={{
           backgroundColor: "#061E29",
           backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
           backgroundSize: "30px 30px"
       }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 text-center text-[#F3F4F4]/50 animate-pulse">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 text-center text-[#F3F4F4]/50 py-32 border border-[#1D546D]/50 border-dashed rounded-xl">
             Loading GitHub Journey...
         </div>
       </section>
     );
   }
-
-  if (!data || !data.user) return null;
 
   return (
     <section className="py-24 text-[#F3F4F4] font-NeueHaas  relative bg-[#061E29]/20" style={{

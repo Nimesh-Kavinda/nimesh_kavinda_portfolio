@@ -54,13 +54,13 @@ const AboutSection = () => {
           </motion.h2>
         </div>
 
-        <div className="flex lg:hidden justify-center   mb-15">
-          <div className="relative w-40 h-40 rounded-full overflow-hidden border border-[#5F9598]/20">
+        <div className="flex justify-center lg:hidden mb-12">
+          <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-[#5F9598]/20 shadow-xl">
             <Image
               src="/images/my-profile.jpg"
               alt="Nimesh Kavinda - Full-Stack Web Developer"
               fill
-              className="object-cover "
+              className="object-cover"
             />
           </div>
         </div>
