@@ -1,0 +1,52 @@
+name: Auto Update Repository
+
+on:
+  schedule:
+    # Every day at 2:00 AM UTC
+    - cron: "0 2 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update timestamp
+        run: |
+          echo "Last Updated: $(date)" > LAST_UPDATED.md
+
+      - name: Commit Changes
+  run: |
+    git add LAST_UPDATED.md
+
+    if git diff --cached --quiet; then
+      echo "No changes to commit."
+      exit 0
+    fi
+
+    messages=(
+      "Update the Project section"
+      "Improve portfolio content"
+      "Update project information"
+      "Refine portfolio layout"
+      "Update project details"
+      "Enhance portfolio"
+      "Minor project improvements"
+    )
+
+    message=${messages[$RANDOM % ${#messages[@]}]}
+
+    git commit -m "$message"
+    git push
