@@ -2,53 +2,31 @@ name: Auto Update Repository
 
 on:
   schedule:
-    - cron: "0 2 * * *"
-    - cron: "0 10 * * *"
-    - cron: "0 18 * * *"
-
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  auto-commit:
+  update:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Configure Git
+      - name: Make update
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "Auto update $(date)" >> update.txt
 
-      - name: Update timestamp
+      - name: Commit changes
         run: |
-          echo "Last Updated: $(date -u)" > LAST_UPDATED.md
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit Changes
-        shell: bash
-        run: |
-          git add LAST_UPDATED.md
+          git add update.txt
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
+          git commit -m "Automated update" || echo "No changes to commit"
 
-          messages=(
-            "Update the Project section"
-            "Improve portfolio content"
-            "Update project information"
-            "Refine portfolio layout"
-            "Update project details"
-            "Enhance portfolio"
-            "Minor project improvements"
-          )
-
-          message=${messages[$((RANDOM % ${#messages[@]}))]}
-
-          git commit -m "$message"
           git push
