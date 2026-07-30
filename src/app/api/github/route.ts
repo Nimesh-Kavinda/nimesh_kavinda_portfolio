@@ -2,16 +2,67 @@ import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic'; // Prevent static generation failures if API rate limits hit
 
+const FALLBACK_GITHUB_DATA = {
+  user: {
+    login: 'Nimesh-Kavinda',
+    name: 'Nimesh Kavinda',
+    avatar_url: '/images/my-profile.jpg',
+    html_url: 'https://github.com/Nimesh-Kavinda',
+    bio: 'Full-stack web developer focused on modern web products.',
+    public_repos: 0,
+    followers: 0,
+    following: 0,
+  },
+  repos: [] as any[],
+};
+
+async function fetchWithTimeout(input: RequestInfo | URL, init: RequestInit = {}, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    return await fetch(input, {
+      ...init,
+      signal: controller.signal,
+      headers: {
+        'User-Agent': 'nimesh-portfolio',
+        ...(init.headers || {}),
+      },
+    });
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
 export async function GET() {
   try {
-    const userRes = await fetch('https://api.github.com/users/Nimesh-Kavinda', {
+    const userRes = await fetchWithTimeout('https://api.github.com/users/Nimesh-Kavinda', {
       next: { revalidate: 3600 }
     });
+    if (!userRes.ok) {
+      return NextResponse.json(FALLBACK_GITHUB_DATA);
+    }
     const user = await userRes.json();
 
-    const reposRes = await fetch('https://api.github.com/users/Nimesh-Kavinda/repos?per_page=100&sort=updated', {
+    const reposRes = await fetchWithTimeout('https://api.github.com/users/Nimesh-Kavinda/repos?per_page=100&sort=updated', {
       next: { revalidate: 3600 }
     });
+    if (!reposRes.ok) {
+      return NextResponse.json({
+        ...FALLBACK_GITHUB_DATA,
+        user: {
+          ...FALLBACK_GITHUB_DATA.user,
+          login: user.login,
+          name: user.name,
+          avatar_url: user.avatar_url,
+          html_url: user.html_url,
+          bio: user.bio,
+          public_repos: user.public_repos,
+          followers: user.followers,
+          following: user.following,
+        },
+      });
+    }
     const repos = await reposRes.json();
 
     // 1. Filter out forks
@@ -104,6 +155,6 @@ export async function GET() {
     });
   } catch (error) {
     console.error('Error fetching github data:', error);
-    return NextResponse.json({ error: 'Failed to fetch github data' }, { status: 500 });
+    return NextResponse.json(FALLBACK_GITHUB_DATA);
   }
 }

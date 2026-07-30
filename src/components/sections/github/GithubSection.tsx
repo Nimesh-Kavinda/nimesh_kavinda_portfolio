@@ -7,6 +7,7 @@ import Image from "next/image";
 export default function GithubSection() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -17,6 +18,7 @@ export default function GithubSection() {
         setData(json);
       } catch (error) {
         console.error("Error fetching github data:", error);
+        setError("GitHub data is temporarily unavailable.");
       } finally {
         setLoading(false);
       }
@@ -24,7 +26,7 @@ export default function GithubSection() {
     fetchData();
   }, []);
 
-  if (!data || !data.user) {
+  if (loading) {
     return (
       <section className="py-24 text-[#F3F4F4] font-NeueHaas relative bg-[#061E29]/20" style={{
           backgroundColor: "#061E29",
@@ -33,6 +35,31 @@ export default function GithubSection() {
       }}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 text-center text-[#F3F4F4]/50 py-32 border border-[#1D546D]/50 border-dashed rounded-xl">
             Loading GitHub Journey...
+        </div>
+      </section>
+    );
+  }
+
+  if (error || !data || !data.user) {
+    return (
+      <section className="py-24 text-[#F3F4F4] font-NeueHaas relative bg-[#061E29]/20" style={{
+          backgroundColor: "#061E29",
+          backgroundImage: "radial-gradient(circle, rgba(95, 149, 152, 0.4) 1.5px, transparent 1.5px)",
+          backgroundSize: "30px 30px"
+      }}>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16 border border-[#1D546D]/50 border-dashed rounded-xl text-center text-[#F3F4F4]/70">
+          <p className="text-lg font-semibold mb-2">GitHub Journey</p>
+          <p className="text-sm text-[#F3F4F4]/50 mb-6">
+            {error || "GitHub data could not be loaded right now."}
+          </p>
+          <a
+            href="https://github.com/Nimesh-Kavinda"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#F3F4F4] hover:text-amber-400 transition-colors border-b border-[#5F9598]/20 hover:border-amber-400 pb-1"
+          >
+            Open GitHub profile
+          </a>
         </div>
       </section>
     );
