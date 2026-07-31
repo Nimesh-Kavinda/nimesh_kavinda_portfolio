@@ -56,4 +56,4 @@ jobs:
 
       - name: Push Changes
         run: |
-          git push origin HEAD:${{ github.ref }}
+          git push origin main
