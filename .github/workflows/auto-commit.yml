@@ -1,10 +1,9 @@
-name: Auto Update Repository
+name: Random Daily Repository Maintenance
 
 on:
   schedule:
-    - cron: "0 2 * * *"
-    - cron: "0 10 * * *"
-    - cron: "0 18 * * *"
+    # Check every hour
+    - cron: "0 * * * *"
 
   workflow_dispatch:
 
@@ -20,19 +19,83 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
 
       - name: Configure Git
         run: |
           git config user.name "nimesh-kavinda"
           git config user.email "nimeshkavindakarunasinghe@gmail.com"
 
-      - name: Update timestamp
+      - name: Determine daily commit target
+        id: target
         run: |
-          echo "Last Updated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > LAST_UPDATED.md
+          DATE=$(date -u '+%Y-%m-%d')
+          STATE_DIR="$GITHUB_WORKSPACE/.github"
+          STATE_FILE="$STATE_DIR/automation-state"
 
-      - name: Commit Changes
+          mkdir -p "$STATE_DIR"
+
+          # Generate a new random target for each day.
+          # Range: 2-18 commits per day.
+          if [ -f "$STATE_FILE" ]; then
+            SAVED_DATE=$(cut -d'|' -f1 "$STATE_FILE")
+          else
+            SAVED_DATE=""
+          fi
+
+          if [ "$SAVED_DATE" != "$DATE" ]; then
+            TARGET=$((2 + RANDOM % 17))
+            CURRENT=0
+
+            echo "$DATE|$TARGET|$CURRENT" > "$STATE_FILE"
+
+            echo "New day: $DATE"
+            echo "Random daily target: $TARGET"
+          else
+            TARGET=$(cut -d'|' -f2 "$STATE_FILE")
+            CURRENT=$(cut -d'|' -f3 "$STATE_FILE")
+
+            echo "Existing daily target: $TARGET"
+            echo "Current commits: $CURRENT"
+          fi
+
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          echo "TARGET=$TARGET" >> "$GITHUB_ENV"
+          echo "CURRENT=$CURRENT" >> "$GITHUB_ENV"
+
+      - name: Random commit decision
+        id: decision
         run: |
-          git add LAST_UPDATED.md
+          if [ "$CURRENT" -ge "$TARGET" ]; then
+            echo "Daily target reached: $CURRENT/$TARGET"
+            echo "commit=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Random chance on each hourly check.
+          # This prevents commits from happening at a fixed schedule.
+          RANDOM_VALUE=$((RANDOM % 100))
+
+          if [ "$RANDOM_VALUE" -lt 65 ]; then
+            echo "Random decision: commit"
+            echo "commit=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Random decision: skip"
+            echo "commit=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update generated metadata
+        if: steps.decision.outputs.commit == 'true'
+        run: |
+          mkdir -p .github/generated
+
+          echo "Automated repository maintenance" > .github/generated/LAST_UPDATED.md
+          echo "Last automated update: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> .github/generated/LAST_UPDATED.md
+
+      - name: Commit automated update
+        if: steps.decision.outputs.commit == 'true'
+        run: |
+          git add .github/generated/LAST_UPDATED.md
 
           if git diff --cached --quiet; then
             echo "No changes detected."
@@ -40,13 +103,14 @@ jobs:
           fi
 
           messages=(
-            "Update portfolio timestamp"
-            "Improve portfolio content"
-            "Update project information"
-            "Refine portfolio layout"
-            "Update project details"
-            "Enhance portfolio"
-            "Apply minor improvements"
+            "chore: automated repository maintenance"
+            "chore: refresh generated metadata"
+            "chore: update repository timestamp"
+            "chore: automated maintenance update"
+            "chore: refresh project metadata"
+            "chore: update generated information"
+            "chore: refresh repository metadata"
+            "chore: automated metadata refresh"
           )
 
           random_index=$((RANDOM % ${#messages[@]}))
@@ -54,6 +118,23 @@ jobs:
 
           git commit -m "$commit_message"
 
-      - name: Push Changes
+      - name: Update daily counter
+        if: steps.decision.outputs.commit == 'true'
+        run: |
+          STATE_FILE=".github/automation-state"
+
+          TARGET=$(cut -d'|' -f2 "$STATE_FILE")
+          CURRENT=$(cut -d'|' -f3 "$STATE_FILE")
+
+          CURRENT=$((CURRENT + 1))
+
+          echo "$DATE|$TARGET|$CURRENT" > "$STATE_FILE"
+
+          git add "$STATE_FILE"
+
+          git commit -m "chore: update automation state"
+
+      - name: Push changes
+        if: steps.decision.outputs.commit == 'true'
         run: |
           git push origin main
